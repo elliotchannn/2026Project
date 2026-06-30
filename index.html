@@ -50,6 +50,14 @@
     .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .panel { padding: 20px; }
     .panel h4 { margin: 0 0 12px; font-size: 18px; }
+    .weather-strip { display: grid; grid-template-columns: 1.2fr auto; gap: 12px 18px; align-items: center; margin-bottom: 14px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.75); border-radius: 8px; background: rgba(255,255,255,.72); box-shadow: var(--shadow); }
+    .weather-strip b { display: block; margin-bottom: 5px; font-size: 16px; }
+    .weather-strip span, .weather-strip p { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .weather-strip p { grid-column: 1 / -1; margin: 0; }
+    .weather-tags { display: flex; flex-wrap: wrap; gap: 7px; justify-content: flex-end; }
+    .weather-tags span { min-height: 28px; display: inline-flex; align-items: center; padding: 0 10px; border-radius: 999px; color: #1d1d1f; background: rgba(0,122,255,.1); border: 1px solid rgba(0,122,255,.16); font-weight: 600; }
+    .weather-days { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; }
+    .weather-days span { padding: 6px 9px; border-radius: 999px; background: rgba(29,29,31,.06); }
     ul { margin: 0; padding-left: 18px; color: var(--ink); }
     li { margin: 8px 0; line-height: 1.45; }
     .muted { color: var(--muted); }
@@ -85,6 +93,8 @@
       .update { justify-self: start; text-align: left; }
       .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid, .panels, .calendar-wrap { grid-template-columns: 1fr; }
+      .weather-strip { grid-template-columns: 1fr; }
+      .weather-tags { justify-content: flex-start; }
     }
     @media (max-width: 560px) {
       .shell { padding: 18px 14px 40px; }
@@ -112,7 +122,7 @@
 
     <section class="summary">
       <div class="metric"><div class="label">专项工程</div><div class="value">9</div><div class="note">纳入主看板</div></div>
-      <div class="metric"><div class="label">控制价合计</div><div class="value">¥3,579,333</div><div class="note">来自专项进度表</div></div>
+      <div class="metric"><div class="label">施工窗口</div><div class="value">7-8月</div><div class="note">暑期集中实施</div></div>
       <div class="metric"><div class="label">平均推进度</div><div class="value">58%</div><div class="note">按阶段估算</div></div>
       <div class="metric"><div class="label">当前主状态</div><div class="value">3</div><div class="note">个项目仍在招标中</div></div>
     </section>
@@ -140,7 +150,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月1日至7月30日</span></div>
               <div class="cell"><b>验收</b><span>8月1日前后</span></div>
-              <div class="cell"><b>控制价</b><span>¥95,030</span></div>
+              <div class="cell"><b>当前节点</b><span>采购招标</span></div>
               <div class="cell"><b>预付款</b><span>无预付</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>招标中（采联）</span></div>
@@ -151,13 +161,6 @@
                 <b>协调事项</b><ul><li>款式美观，安全性</li></ul>
                 <b>重要事项</b><ul><li>安装必须保证足够牢固</li></ul>
                 <b>联调备忘</b><span class="muted">暂无</span>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：5000（已支付）</li>
-                  <li>设计：3202（已支付）</li>
-                  <li>审图：无</li>
-                  <li>监理：2885</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -177,7 +180,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月1日至7月30日</span></div>
               <div class="cell"><b>验收</b><span>8月1日前后</span></div>
-              <div class="cell"><b>控制价</b><span>¥173,320</span></div>
+              <div class="cell"><b>当前节点</b><span>进场准备</span></div>
               <div class="cell"><b>预付款</b><span>无预付</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>（采联）中建港湾建设（深圳）有限公司 ￥148,618.29</span></div>
@@ -188,13 +191,6 @@
                 <b>协调事项</b><ul><li>空调位置</li><li>照明尽量符合国标</li></ul>
                 <b>重要事项</b><span class="muted">暂无</span>
                 <b>联调备忘</b><span class="muted">暂无</span>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：5000（已支付）</li>
-                  <li>设计：无</li>
-                  <li>审图：无</li>
-                  <li>监理：5262</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -214,7 +210,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月1日至7月30日</span></div>
               <div class="cell"><b>验收</b><span>8月1日前后</span></div>
-              <div class="cell"><b>控制价</b><span>¥219,310</span></div>
+              <div class="cell"><b>当前节点</b><span>材料定制</span></div>
               <div class="cell"><b>预付款</b><span>预付30%完成</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>（振东）深圳建安建筑装饰集团有限公司 ￥207,905.92</span></div>
@@ -225,13 +221,6 @@
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>财产安全</li><li>化学实验室外开门、带观察窗</li></ul>
                 <b>联调备忘</b><ul><li>实验室搬迁仅含2扇门</li></ul>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：5000（已支付）</li>
-                  <li>设计：无</li>
-                  <li>审图：无</li>
-                  <li>监理：6659</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -251,7 +240,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月10日至8月20日</span></div>
               <div class="cell"><b>验收</b><span>8月21日至8月25日</span></div>
-              <div class="cell"><b>控制价</b><span>¥296,348</span></div>
+              <div class="cell"><b>当前节点</b><span>进场准备</span></div>
               <div class="cell"><b>预付款</b><span>预付30%完成</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>（采联）深圳市世维建设工程有限公司 ￥ 289,678.76</span></div>
@@ -262,13 +251,6 @@
                 <b>协调事项</b><ul><li>张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式</li></ul>
                 <b>重要事项</b><ul><li>楼板薄注意敲掉瓷砖水泥时楼板情况</li><li>补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂</li><li>浴室洗手间潮湿，电线线路的防水防触电</li><li>教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。</li></ul>
                 <b>联调备忘</b><span class="muted">暂无</span>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：4500（已支付）</li>
-                  <li>设计：7945（已支付）</li>
-                  <li>审图：无</li>
-                  <li>监理：8800</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -288,7 +270,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月10日至8月20日</span></div>
               <div class="cell"><b>验收</b><span>8月21日至8月25日</span></div>
-              <div class="cell"><b>控制价</b><span>¥536,000</span></div>
+              <div class="cell"><b>当前节点</b><span>采购招标</span></div>
               <div class="cell"><b>预付款</b><span>预付30%未支付</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>招标中（远东）2026年7月6日上午9时30分</span></div>
@@ -299,13 +281,6 @@
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>A座供电线路到B座之间是否影响施工</li><li>打桩机入校，是否需先铲平花园</li><li>大门、通道等保护</li></ul>
                 <b>联调备忘</b><ul><li>前期排查地下主电路网</li></ul>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：7612 未支付</li>
-                  <li>设计：19000（已支付）</li>
-                  <li>审图：8000（已支付）</li>
-                  <li>监理：22836</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -325,7 +300,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月10日至8月20日</span></div>
               <div class="cell"><b>验收</b><span>8月21日至8月25日</span></div>
-              <div class="cell"><b>控制价</b><span>¥515,900</span></div>
+              <div class="cell"><b>当前节点</b><span>采购招标</span></div>
               <div class="cell"><b>预付款</b><span>预付30%未支付</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>招标中（振东）2026年7月3日14时30分</span></div>
@@ -336,13 +311,6 @@
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>前期物品搬离或保护</li><li>空调外机迁移复位，调试</li><li>幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接</li><li>施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾）</li><li>室内保护，尤其是核心机房保护</li><li>落地窗帘拆除恢复、天花拆除恢复</li><li>电焊等工序的消防安全，谨防火灾</li><li>外框架安装好后才能量尺寸定制玻璃，中间有空置期。</li></ul>
                 <b>联调备忘</b><ul><li>清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置</li></ul>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：6060（已支付）</li>
-                  <li>设计：19965 未支付</li>
-                  <li>审图：无</li>
-                  <li>监理：15662</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -362,7 +330,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月10日至8月20日</span></div>
               <div class="cell"><b>验收</b><span>8月21日至8月25日</span></div>
-              <div class="cell"><b>控制价</b><span>¥153,020</span></div>
+              <div class="cell"><b>当前节点</b><span>进场准备</span></div>
               <div class="cell"><b>预付款</b><span>预付30%完成</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>（远东）深圳市深泰建设工程有限公司 ¥147,043.03</span></div>
@@ -373,13 +341,6 @@
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>玻璃幕墙的安全性（沉降问题）</li><li>消防管漏水</li><li>西侧大门是否保留 ***</li><li>幕墙方案需要与A座东西侧改造方案保持一致</li></ul>
                 <b>联调备忘</b><ul><li>与A座换门：心理中心西侧门是否保留？</li><li>与A座幕墙：心理中心幕墙设计与A座幕墙设计一致性</li></ul>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：2000 未支付</li>
-                  <li>设计：4744 未支付</li>
-                  <li>审图：无</li>
-                  <li>监理：4591</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -399,7 +360,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月10日至8月20日</span></div>
               <div class="cell"><b>验收</b><span>8月21日至8月25日</span></div>
-              <div class="cell"><b>控制价</b><span>¥667,522</span></div>
+              <div class="cell"><b>当前节点</b><span>进场准备</span></div>
               <div class="cell"><b>预付款</b><span>预付30%完成</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>（中正）深圳市深泰建设工程有限公司 ￥647470.08</span></div>
@@ -410,13 +371,6 @@
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>空调</li></ul>
                 <b>联调备忘</b><ul><li>与A座换门：运动空间项目包含1楼4个门改造</li><li>与A座加固：工序顺序及现场协调问题</li></ul>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：10198 未支付</li>
-                  <li>设计：24136 未支付</li>
-                  <li>审图：无</li>
-                  <li>监理：21484</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -436,7 +390,7 @@
             <div class="meta">
               <div class="cell"><b>工期</b><span>7月10日至8月20日</span></div>
               <div class="cell"><b>验收</b><span>8月21日至8月25日</span></div>
-              <div class="cell"><b>控制价</b><span>¥922,883</span></div>
+              <div class="cell"><b>当前节点</b><span>进场准备</span></div>
               <div class="cell"><b>预付款</b><span>预付30%完成</span></div>
             </div>
             <div class="cell"><b>招标/合同情况</b><span>（采联）深圳市深泰建设工程有限公司 ￥882310.47</span></div>
@@ -447,13 +401,6 @@
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>花园排水沟设计或位置变动</li><li>设计细化</li><li>与打桩加固的时间、施工等协调</li><li>A座到B座的主电缆、光纤井位置</li><li>雨棚单侧排水</li></ul>
                 <b>联调备忘</b><ul><li>与A座幕墙：幕墙落地处与花园地面平齐度</li></ul>
-                <b>费用状态</b>
-                <ul>
-                  <li>造价：13837 未支付</li>
-                  <li>设计：32749 未支付</li>
-                  <li>审图：无</li>
-                  <li>监理：29151</li>
-                </ul>
               </div>
             </details>
           </div>
@@ -466,6 +413,18 @@
       <p>7月与8月施工排期、关键起止和验收日期</p>
     </section>
     
+    
+    <section class="weather-strip">
+      <div>
+        <b>深圳福田天气</b>
+        <span>短期天气预报待临近更新；暑期施工重点关注雷阵雨、高温、台风和强对流天气。</span>
+      </div>
+      <div class="weather-tags">
+        <span>雷阵雨</span><span>高温</span><span>台风</span><span>强对流</span>
+      </div>
+      <p>天气接口被浏览器扩展拦截，当前仅保留天气提醒位置；临近施工日期可重新同步实际预报。</p>
+    </section>
+  
     <section class="calendar-wrap">
       
     <section class="calendar-month">
@@ -1794,7 +1753,7 @@
     <p class="source">数据来源：2026专项进度表.xlsx、2026专项前期准备及协调事宜.xlsx、26年总务项目联调备忘录.xlsx。页面为静态文件，可部署到 GitHub Pages；更新时重新读取最新表格并生成新版网页。</p>
   </main>
   <script>
-    const projects = [{"id":"p1","name":"南校区B座不锈钢栏杆更换工程","color":"#007AFF","status":"招标中","stage":"采购招标","progress":46,"budget":95030,"cost":{"estimate":"5000（已支付）","design":"3202（已支付）","review":"无","supervision":"2885","controlPrice":"控制价（95030）"},"tender":"招标中（采联）","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"暑假","coordination":"款式美观，安全性","importantItems":"安装必须保证足够牢固","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":[],"calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":[]},{"id":"p2","name":"南校区教室改造与粉刷项目","color":"#34C759","status":"开工准备","stage":"进场准备","progress":62,"budget":173320,"cost":{"estimate":"5000（已支付）","design":"无","review":"无","supervision":"5262","controlPrice":"控制价（173320）"},"tender":"（采联）中建港湾建设（深圳）有限公司 ￥148,618.29","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"5月招标","coordination":"1、空调位置 2、照明尽量符合国标","importantItems":"","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同（已完成）"}],"memo":[],"calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["场地移交"]},{"id":"p3","name":"南校区A座换门工程","color":"#FF9500","status":"新门定制中","stage":"材料定制","progress":72,"budget":219310,"cost":{"estimate":"5000（已支付）","design":"无","review":"无","supervision":"6659","controlPrice":"控制价（219310）"},"tender":"（振东）深圳建安建筑装饰集团有限公司 ￥207,905.92","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"完成A座加固和东西侧玻璃幕墙后可实施","coordination":"噪声与周边社区沟通","importantItems":"1、财产安全 2、化学实验室外开门、带观察窗","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["实验室搬迁仅含2扇门"],"calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["社区沟通","场地移交"]},{"id":"p4","name":"南校区宿舍2、3楼冲凉间防水维修改造项目","color":"#AF52DE","status":"开工准备","stage":"进场准备","progress":62,"budget":296348,"cost":{"estimate":"4500（已支付）","design":"7945（已支付）","review":"无","supervision":"8800","controlPrice":"控制价（296348）"},"tender":"（采联）深圳市世维建设工程有限公司 ￥ 289,678.76","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假期间","coordination":"张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式","importantItems":"1、楼板薄注意敲掉瓷砖水泥时楼板情况 2、补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂 3、浴室洗手间潮湿，电线线路的防水防触电 4、教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":[],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p5","name":"南校区A座加固工程","color":"#FF2D55","status":"招标中","stage":"采购招标","progress":46,"budget":536000,"cost":{"estimate":"7612 未支付","design":"19000（已支付）","review":"8000（已支付）","supervision":"22836","controlPrice":"控制价（536000）"},"tender":"招标中（远东）2026年7月6日上午9时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、A座供电线路到B座之间是否影响施工 2、打桩机入校，是否需先铲平花园 3、大门、通道等保护","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["前期排查地下主电路网"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护"]},{"id":"p6","name":"南校区A座东西侧外墙改造","color":"#00C7BE","status":"招标中","stage":"采购招标","progress":46,"budget":515900,"cost":{"estimate":"6060（已支付）","design":"19965 未支付","review":"无","supervision":"15662","controlPrice":"控制价（515900）"},"tender":"招标中（振东）2026年7月3日14时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p7","name":"南校区心理成长中心改造","color":"#5856D6","status":"开工准备","stage":"进场准备","progress":62,"budget":153020,"cost":{"estimate":"2000 未支付","design":"4744 未支付","review":"无","supervision":"4591","controlPrice":"控制价（153020）"},"tender":"（远东）深圳市深泰建设工程有限公司 ¥147,043.03","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、玻璃幕墙的安全性（沉降问题） 2、消防管漏水 3、西侧大门是否保留 ***4.幕墙方案需要与A座东西侧改造方案保持一致","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：心理中心西侧门是否保留？","与A座幕墙：心理中心幕墙设计与A座幕墙设计一致性"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","结构与幕墙衔接"]},{"id":"p8","name":"南校区运动空间改造工程","color":"#FF3B30","status":"开工准备","stage":"进场准备","progress":62,"budget":667522,"cost":{"estimate":"10198 未支付","design":"24136 未支付","review":"无","supervision":"21484","controlPrice":"控制价（667522）"},"tender":"（中正）深圳市深泰建设工程有限公司 ￥647470.08","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、空调","prepImportantItems":"教学处化学实验室搬迁","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：运动空间项目包含1楼4个门改造","与A座加固：工序顺序及现场协调问题"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","结构与幕墙衔接","场地移交"]},{"id":"p9","name":"南校区阅读花园、运动花园改造工程","color":"#30B0C7","status":"开工准备","stage":"进场准备","progress":62,"budget":922883,"cost":{"estimate":"13837 未支付","design":"32749 未支付","review":"无","supervision":"29151","controlPrice":"控制价（922883）"},"tender":"（采联）深圳市深泰建设工程有限公司 ￥882310.47","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、花园排水沟设计或位置变动 2、设计细化 3、与打桩加固的时间、施工等协调 4、A座到B座的主电缆、光纤井位置 5、雨棚单侧排水","prepImportantItems":"绿植（桂花为主）迁移 鼎和孔子讲学两个雕像 朗读亭","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座幕墙：幕墙落地处与花园地面平齐度"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护","结构与幕墙衔接"]}];
+    const projects = [{"id":"p1","name":"南校区B座不锈钢栏杆更换工程","color":"#007AFF","status":"招标中","stage":"采购招标","progress":46,"tender":"招标中（采联）","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"暑假","coordination":"款式美观，安全性","importantItems":"安装必须保证足够牢固","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":[],"calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":[]},{"id":"p2","name":"南校区教室改造与粉刷项目","color":"#34C759","status":"开工准备","stage":"进场准备","progress":62,"tender":"（采联）中建港湾建设（深圳）有限公司 ￥148,618.29","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"5月招标","coordination":"1、空调位置 2、照明尽量符合国标","importantItems":"","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同（已完成）"}],"memo":[],"calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["场地移交"]},{"id":"p3","name":"南校区A座换门工程","color":"#FF9500","status":"新门定制中","stage":"材料定制","progress":72,"tender":"（振东）深圳建安建筑装饰集团有限公司 ￥207,905.92","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"完成A座加固和东西侧玻璃幕墙后可实施","coordination":"噪声与周边社区沟通","importantItems":"1、财产安全 2、化学实验室外开门、带观察窗","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["实验室搬迁仅含2扇门"],"calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["社区沟通","场地移交"]},{"id":"p4","name":"南校区宿舍2、3楼冲凉间防水维修改造项目","color":"#AF52DE","status":"开工准备","stage":"进场准备","progress":62,"tender":"（采联）深圳市世维建设工程有限公司 ￥ 289,678.76","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假期间","coordination":"张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式","importantItems":"1、楼板薄注意敲掉瓷砖水泥时楼板情况 2、补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂 3、浴室洗手间潮湿，电线线路的防水防触电 4、教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":[],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p5","name":"南校区A座加固工程","color":"#FF2D55","status":"招标中","stage":"采购招标","progress":46,"tender":"招标中（远东）2026年7月6日上午9时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、A座供电线路到B座之间是否影响施工 2、打桩机入校，是否需先铲平花园 3、大门、通道等保护","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["前期排查地下主电路网"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护"]},{"id":"p6","name":"南校区A座东西侧外墙改造","color":"#00C7BE","status":"招标中","stage":"采购招标","progress":46,"tender":"招标中（振东）2026年7月3日14时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p7","name":"南校区心理成长中心改造","color":"#5856D6","status":"开工准备","stage":"进场准备","progress":62,"tender":"（远东）深圳市深泰建设工程有限公司 ¥147,043.03","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、玻璃幕墙的安全性（沉降问题） 2、消防管漏水 3、西侧大门是否保留 ***4.幕墙方案需要与A座东西侧改造方案保持一致","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：心理中心西侧门是否保留？","与A座幕墙：心理中心幕墙设计与A座幕墙设计一致性"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","结构与幕墙衔接"]},{"id":"p8","name":"南校区运动空间改造工程","color":"#FF3B30","status":"开工准备","stage":"进场准备","progress":62,"tender":"（中正）深圳市深泰建设工程有限公司 ￥647470.08","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、空调","prepImportantItems":"教学处化学实验室搬迁","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：运动空间项目包含1楼4个门改造","与A座加固：工序顺序及现场协调问题"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","结构与幕墙衔接","场地移交"]},{"id":"p9","name":"南校区阅读花园、运动花园改造工程","color":"#30B0C7","status":"开工准备","stage":"进场准备","progress":62,"tender":"（采联）深圳市深泰建设工程有限公司 ￥882310.47","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、花园排水沟设计或位置变动 2、设计细化 3、与打桩加固的时间、施工等协调 4、A座到B座的主电缆、光纤井位置 5、雨棚单侧排水","prepImportantItems":"绿植（桂花为主）迁移 鼎和孔子讲学两个雕像 朗读亭","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座幕墙：幕墙落地处与花园地面平齐度"],"calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护","结构与幕墙衔接"]}];
     document.querySelectorAll("[data-filter]").forEach((button) => {
       button.addEventListener("click", () => {
         document.querySelectorAll("[data-filter]").forEach((item) => item.classList.remove("active"));
