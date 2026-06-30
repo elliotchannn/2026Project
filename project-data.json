@@ -7,7 +7,6 @@
   ],
   "summary": {
     "totalProjects": 9,
-    "totalBudget": 3579333,
     "averageProgress": 58,
     "bidding": 3,
     "preparing": 5,
@@ -21,14 +20,6 @@
       "status": "招标中",
       "stage": "采购招标",
       "progress": 46,
-      "budget": 95030,
-      "cost": {
-        "estimate": "5000（已支付）",
-        "design": "3202（已支付）",
-        "review": "无",
-        "supervision": "2885",
-        "controlPrice": "控制价（95030）"
-      },
       "tender": "招标中（采联）",
       "prepayment": "无预付",
       "prepaymentState": "待确认",
@@ -60,14 +51,6 @@
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 62,
-      "budget": 173320,
-      "cost": {
-        "estimate": "5000（已支付）",
-        "design": "无",
-        "review": "无",
-        "supervision": "5262",
-        "controlPrice": "控制价（173320）"
-      },
       "tender": "（采联）中建港湾建设（深圳）有限公司 ￥148,618.29",
       "prepayment": "无预付",
       "prepaymentState": "待确认",
@@ -101,14 +84,6 @@
       "status": "新门定制中",
       "stage": "材料定制",
       "progress": 72,
-      "budget": 219310,
-      "cost": {
-        "estimate": "5000（已支付）",
-        "design": "无",
-        "review": "无",
-        "supervision": "6659",
-        "controlPrice": "控制价（219310）"
-      },
       "tender": "（振东）深圳建安建筑装饰集团有限公司 ￥207,905.92",
       "prepayment": "预付30%完成",
       "prepaymentState": "已完成",
@@ -145,14 +120,6 @@
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 62,
-      "budget": 296348,
-      "cost": {
-        "estimate": "4500（已支付）",
-        "design": "7945（已支付）",
-        "review": "无",
-        "supervision": "8800",
-        "controlPrice": "控制价（296348）"
-      },
       "tender": "（采联）深圳市世维建设工程有限公司 ￥ 289,678.76",
       "prepayment": "预付30%完成",
       "prepaymentState": "已完成",
@@ -188,14 +155,6 @@
       "status": "招标中",
       "stage": "采购招标",
       "progress": 46,
-      "budget": 536000,
-      "cost": {
-        "estimate": "7612 未支付",
-        "design": "19000（已支付）",
-        "review": "8000（已支付）",
-        "supervision": "22836",
-        "controlPrice": "控制价（536000）"
-      },
       "tender": "招标中（远东）2026年7月6日上午9时30分",
       "prepayment": "预付30%未支付",
       "prepaymentState": "未支付",
@@ -232,14 +191,6 @@
       "status": "招标中",
       "stage": "采购招标",
       "progress": 46,
-      "budget": 515900,
-      "cost": {
-        "estimate": "6060（已支付）",
-        "design": "19965 未支付",
-        "review": "无",
-        "supervision": "15662",
-        "controlPrice": "控制价（515900）"
-      },
       "tender": "招标中（振东）2026年7月3日14时30分",
       "prepayment": "预付30%未支付",
       "prepaymentState": "未支付",
@@ -277,14 +228,6 @@
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 62,
-      "budget": 153020,
-      "cost": {
-        "estimate": "2000 未支付",
-        "design": "4744 未支付",
-        "review": "无",
-        "supervision": "4591",
-        "controlPrice": "控制价（153020）"
-      },
       "tender": "（远东）深圳市深泰建设工程有限公司 ¥147,043.03",
       "prepayment": "预付30%完成",
       "prepaymentState": "已完成",
@@ -323,14 +266,6 @@
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 62,
-      "budget": 667522,
-      "cost": {
-        "estimate": "10198 未支付",
-        "design": "24136 未支付",
-        "review": "无",
-        "supervision": "21484",
-        "controlPrice": "控制价（667522）"
-      },
       "tender": "（中正）深圳市深泰建设工程有限公司 ￥647470.08",
       "prepayment": "预付30%完成",
       "prepaymentState": "已完成",
@@ -369,14 +304,6 @@
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 62,
-      "budget": 922883,
-      "cost": {
-        "estimate": "13837 未支付",
-        "design": "32749 未支付",
-        "review": "无",
-        "supervision": "29151",
-        "controlPrice": "控制价（922883）"
-      },
       "tender": "（采联）深圳市深泰建设工程有限公司 ￥882310.47",
       "prepayment": "预付30%完成",
       "prepaymentState": "已完成",
@@ -458,5 +385,18 @@
     "现场走访福田区进行过抗震加固的学校，向有经验的总务主任请教设计、施工、验收等全流程的管理和潜在风险点",
     "台风暴雨天气影响，尤其是核心机房设备保护",
     "协调各个区域待报废设备与家具的搬运、报废等事宜（2026-06-29开始进行中）"
-  ]
+  ],
+  "weather": {
+    "location": "深圳市福田区",
+    "updatedAt": "2026-06-30",
+    "source": "天气接口暂未连通",
+    "note": "短期天气预报待临近更新；暑期施工重点关注雷阵雨、高温、台风和强对流天气。",
+    "daily": [],
+    "watchItems": [
+      "雷阵雨",
+      "高温",
+      "台风",
+      "强对流"
+    ]
+  }
 }
