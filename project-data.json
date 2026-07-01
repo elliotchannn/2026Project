@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30",
+  "generatedAt": "2026-07-01",
   "sources": [
     "2026专项进度表.xlsx",
     "2026专项前期准备及协调事宜.xlsx",
@@ -16,7 +16,7 @@
     {
       "id": "p1",
       "name": "南校区B座不锈钢栏杆更换工程",
-      "color": "#007AFF",
+      "color": "#0057D9",
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
@@ -48,7 +48,7 @@
     {
       "id": "p2",
       "name": "南校区教室改造与粉刷项目",
-      "color": "#34C759",
+      "color": "#168A3A",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -82,7 +82,7 @@
     {
       "id": "p3",
       "name": "南校区A座换门工程",
-      "color": "#FF9500",
+      "color": "#E07A00",
       "status": "新门定制中",
       "stage": "材料定制",
       "progress": 50,
@@ -119,7 +119,7 @@
     {
       "id": "p4",
       "name": "南校区宿舍2、3楼冲凉间防水维修改造项目",
-      "color": "#AF52DE",
+      "color": "#7A3FE0",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -155,7 +155,7 @@
     {
       "id": "p5",
       "name": "南校区A座加固工程",
-      "color": "#FF2D55",
+      "color": "#D10F6A",
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
@@ -192,7 +192,7 @@
     {
       "id": "p6",
       "name": "南校区A座东西侧外墙改造",
-      "color": "#00C7BE",
+      "color": "#008C8C",
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
@@ -230,7 +230,7 @@
     {
       "id": "p7",
       "name": "南校区心理成长中心改造",
-      "color": "#5856D6",
+      "color": "#3448C5",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -269,7 +269,7 @@
     {
       "id": "p8",
       "name": "南校区运动空间改造工程",
-      "color": "#FF3B30",
+      "color": "#C62828",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -308,7 +308,7 @@
     {
       "id": "p9",
       "name": "南校区阅读花园、运动花园改造工程",
-      "color": "#30B0C7",
+      "color": "#5F6B1A",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -471,5 +471,13 @@
       "台风",
       "强对流"
     ]
-  }
+  },
+  "keyMilestones": [
+    {
+      "date": "2026-07-09",
+      "label": "联调会",
+      "detail": "施工联调会（深泰建设、创能）",
+      "color": "#111827"
+    }
+  ]
 }
