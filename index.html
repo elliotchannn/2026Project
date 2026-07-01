@@ -27,12 +27,7 @@
     .priority-brief b { display: block; color: var(--muted); font-size: 13px; font-weight: 600; }
     .priority-brief strong { display: block; margin: 8px 0 7px; font-size: 28px; line-height: 1; }
     .priority-brief span { display: block; color: var(--ink); font-size: 13px; line-height: 1.45; }
-    .summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 14px 0 28px; }
-    .metric, .project-card, .panel, .calendar-month { background: var(--card); border: 1px solid rgba(255,255,255,.75); box-shadow: var(--shadow); backdrop-filter: blur(22px); border-radius: 8px; }
-    .metric { padding: 18px; min-height: 118px; }
-    .metric .label { color: var(--muted); font-size: 13px; }
-    .metric .value { margin-top: 12px; font-size: 34px; font-weight: 700; line-height: 1; }
-    .metric .note { margin-top: 10px; color: var(--muted); font-size: 13px; }
+    .project-card, .panel, .calendar-month { background: var(--card); border: 1px solid rgba(255,255,255,.75); box-shadow: var(--shadow); backdrop-filter: blur(22px); border-radius: 8px; }
     .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 4px 0 20px; }
     button { border: 1px solid var(--line); background: rgba(255,255,255,.72); color: var(--ink); min-height: 36px; padding: 0 14px; border-radius: 999px; font: inherit; cursor: pointer; }
     button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -122,7 +117,6 @@
       header { grid-template-columns: 1fr; }
       .update { justify-self: start; text-align: left; }
       .priority-brief { grid-template-columns: 1fr; }
-      .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid, .panels, .calendar-wrap, .focus-board, .task-board { grid-template-columns: 1fr; }
       .weather-strip { grid-template-columns: 1fr; }
       .weather-tags { justify-content: flex-start; }
@@ -138,11 +132,6 @@
       .priority-brief b { font-size: 12px; }
       .priority-brief strong { display: block; margin: 4px 0 4px; font-size: 19px; }
       .priority-brief span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 11px; line-height: 1.25; }
-      .summary { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 8px 0 10px; }
-      .metric { min-height: 50px; padding: 8px 7px; }
-      .metric .label { font-size: 11px; }
-      .metric .value { margin-top: 4px; font-size: 18px; }
-      .metric .note { display: none; }
       .toolbar { margin-bottom: 12px; gap: 7px; }
       button { min-height: 32px; padding: 0 10px; font-size: 13px; }
       .grid { gap: 10px; }
@@ -169,7 +158,7 @@
         <p class="subtitle">基于专项进度表、前期准备协调表和总务项目联调备忘录整合。每个工程使用独立代表色，便于快速识别节点、工期、风险和关键协调事项。</p>
       </div>
       <div class="update">
-        数据日期：2026-06-30<br>
+        数据日期：2026-07-01<br>
         进度优先读取表格“进度”行
       </div>
     </header>
@@ -178,13 +167,13 @@
     <section class="priority-brief" aria-label="首屏关注">
       <article>
         <b>近期启动</b>
-        <strong>3项</strong>
-        <span>B座不锈钢栏杆更换工程、教室改造与粉刷项目、A座换门工程</span>
+        <strong>2项</strong>
+        <span>07-01 教室改造与粉刷项目；07-01 A座换门工程</span>
       </article>
       <article>
-        <b>采购节点</b>
-        <strong>2项</strong>
-        <span>07-03 A座东西侧外墙改造；07-06 A座加固工程</span>
+        <b>重要节点</b>
+        <strong>5项</strong>
+        <span>07-01 教室改造与粉刷项目计划开工；07-01 A座换门工程计划开工；07-03 A座东西侧外墙改造开标；07-06 A座加固工程开标；07-09 施工联调会（深泰建设、创能）</span>
       </article>
       <article>
         <b>天气关注</b>
@@ -193,13 +182,6 @@
       </article>
     </section>
   
-
-    <section class="summary">
-      <div class="metric"><div class="label">专项工程</div><div class="value">9</div><div class="note">纳入主看板</div></div>
-      <div class="metric"><div class="label">施工窗口</div><div class="value">7-8月</div><div class="note">暑期集中实施</div></div>
-      <div class="metric"><div class="label">平均推进度</div><div class="value">20%</div><div class="note">按表格进度</div></div>
-      <div class="metric"><div class="label">当前主状态</div><div class="value">3</div><div class="note">个项目仍在招标中</div></div>
-    </section>
 
     <nav class="toolbar" aria-label="筛选项目">
       <button class="active" data-filter="all">全部</button>
@@ -210,7 +192,7 @@
 
     <section class="grid" id="projectGrid">
       
-        <article class="project-card" data-status="招标中" style="--accent:#007AFF;--progress:10%">
+        <article class="project-card" data-status="招标中" style="--accent:#0057D9;--progress:10%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -241,7 +223,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="开工准备" style="--accent:#34C759;--progress:20%">
+        <article class="project-card" data-status="开工准备" style="--accent:#168A3A;--progress:20%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -272,7 +254,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="新门定制中" style="--accent:#FF9500;--progress:50%">
+        <article class="project-card" data-status="新门定制中" style="--accent:#E07A00;--progress:50%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -303,7 +285,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="开工准备" style="--accent:#AF52DE;--progress:20%">
+        <article class="project-card" data-status="开工准备" style="--accent:#7A3FE0;--progress:20%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -334,7 +316,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="招标中" style="--accent:#FF2D55;--progress:10%">
+        <article class="project-card" data-status="招标中" style="--accent:#D10F6A;--progress:10%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -365,7 +347,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="招标中" style="--accent:#00C7BE;--progress:10%">
+        <article class="project-card" data-status="招标中" style="--accent:#008C8C;--progress:10%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -396,7 +378,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="开工准备" style="--accent:#5856D6;--progress:20%">
+        <article class="project-card" data-status="开工准备" style="--accent:#3448C5;--progress:20%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -427,7 +409,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="开工准备" style="--accent:#FF3B30;--progress:20%">
+        <article class="project-card" data-status="开工准备" style="--accent:#C62828;--progress:20%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -458,7 +440,7 @@
           </div>
         </article>
       
-        <article class="project-card" data-status="开工准备" style="--accent:#30B0C7;--progress:20%">
+        <article class="project-card" data-status="开工准备" style="--accent:#5F6B1A;--progress:20%">
           <div class="accent"></div>
           <div class="card-body">
             <div class="card-head">
@@ -573,19 +555,19 @@
       </div>
       <div class="day-weather weather-ok">多云 27-33℃</div>
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#007AFF">
+          <div class="day-event" style="--accent:#0057D9">
             <strong>开工</strong>南校区B座不锈钢栏杆更换工程
           </div>
         
-          <div class="day-event" style="--accent:#34C759">
+          <div class="day-event" style="--accent:#168A3A">
             <strong>开工</strong>南校区教室改造与粉刷项目
           </div>
         
-          <div class="day-event" style="--accent:#FF9500">
+          <div class="day-event" style="--accent:#E07A00">
             <strong>开工</strong>南校区A座换门工程
           </div>
         
@@ -599,7 +581,7 @@
       </div>
       <div class="day-weather weather-risk">多云 27-33℃</div>
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -613,7 +595,7 @@
       </div>
       <div class="day-weather weather-rain">中雨 25-29℃</div>
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -627,7 +609,7 @@
       </div>
       <div class="day-weather weather-rain">中雨 25-30℃</div>
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -641,7 +623,7 @@
       </div>
       <div class="day-weather weather-risk">大雨 26-29℃</div>
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -655,7 +637,7 @@
       </div>
       <div class="day-weather weather-rain">小雨 26-29℃</div>
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -669,7 +651,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -683,7 +665,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
         
@@ -693,13 +675,17 @@
     <div class="calendar-day">
       <div class="day-head">
         <span>9</span>
-        
+        <b>1项</b>
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span>
       </div>
       <div class="day-events">
+        
+          <div class="day-event" style="--accent:#111827">
+            <strong>联调会</strong>施工联调会（深泰建设、创能）
+          </div>
         
       </div>
     </div>
@@ -711,31 +697,31 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#AF52DE">
+          <div class="day-event" style="--accent:#7A3FE0">
             <strong>开工</strong>南校区宿舍2、3楼冲凉间防水维修改造项目
           </div>
         
-          <div class="day-event" style="--accent:#FF2D55">
+          <div class="day-event" style="--accent:#D10F6A">
             <strong>开工</strong>南校区A座加固工程
           </div>
         
-          <div class="day-event" style="--accent:#00C7BE">
+          <div class="day-event" style="--accent:#008C8C">
             <strong>开工</strong>南校区A座东西侧外墙改造
           </div>
         
-          <div class="day-event" style="--accent:#5856D6">
+          <div class="day-event" style="--accent:#3448C5">
             <strong>开工</strong>南校区心理成长中心改造
           </div>
         
-          <div class="day-event" style="--accent:#FF3B30">
+          <div class="day-event" style="--accent:#C62828">
             <strong>开工</strong>南校区运动空间改造工程
           </div>
         
-          <div class="day-event" style="--accent:#30B0C7">
+          <div class="day-event" style="--accent:#5F6B1A">
             <strong>开工</strong>南校区阅读花园、运动花园改造工程
           </div>
         
@@ -749,7 +735,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -763,7 +749,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -777,7 +763,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -791,7 +777,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -805,7 +791,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -819,7 +805,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -833,7 +819,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -847,7 +833,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -861,7 +847,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -875,7 +861,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -889,7 +875,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -903,7 +889,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -917,7 +903,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -931,7 +917,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -945,7 +931,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -959,7 +945,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -973,7 +959,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -987,7 +973,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1001,7 +987,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1015,19 +1001,19 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#007AFF">
+          <div class="day-event" style="--accent:#0057D9">
             <strong>工期止</strong>南校区B座不锈钢栏杆更换工程
           </div>
         
-          <div class="day-event" style="--accent:#34C759">
+          <div class="day-event" style="--accent:#168A3A">
             <strong>工期止</strong>南校区教室改造与粉刷项目
           </div>
         
-          <div class="day-event" style="--accent:#FF9500">
+          <div class="day-event" style="--accent:#E07A00">
             <strong>工期止</strong>南校区A座换门工程
           </div>
         
@@ -1041,7 +1027,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1055,19 +1041,19 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#007AFF">
+          <div class="day-event" style="--accent:#0057D9">
             <strong>验收</strong>南校区B座不锈钢栏杆更换工程
           </div>
         
-          <div class="day-event" style="--accent:#34C759">
+          <div class="day-event" style="--accent:#168A3A">
             <strong>验收</strong>南校区教室改造与粉刷项目
           </div>
         
-          <div class="day-event" style="--accent:#FF9500">
+          <div class="day-event" style="--accent:#E07A00">
             <strong>验收</strong>南校区A座换门工程
           </div>
         
@@ -1081,7 +1067,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1095,7 +1081,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1109,7 +1095,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1123,7 +1109,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1137,7 +1123,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1151,7 +1137,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1165,7 +1151,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1193,7 +1179,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1207,7 +1193,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1221,7 +1207,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1235,7 +1221,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1249,19 +1235,19 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#007AFF"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#34C759"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#FF9500"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区B座不锈钢栏杆更换工程" style="--accent:#0057D9"></span><span class="day-bar" title="南校区教室改造与粉刷项目" style="--accent:#168A3A"></span><span class="day-bar" title="南校区A座换门工程" style="--accent:#E07A00"></span><span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#007AFF">
+          <div class="day-event" style="--accent:#0057D9">
             <strong>工期止</strong>南校区B座不锈钢栏杆更换工程
           </div>
         
-          <div class="day-event" style="--accent:#34C759">
+          <div class="day-event" style="--accent:#168A3A">
             <strong>工期止</strong>南校区教室改造与粉刷项目
           </div>
         
-          <div class="day-event" style="--accent:#FF9500">
+          <div class="day-event" style="--accent:#E07A00">
             <strong>工期止</strong>南校区A座换门工程
           </div>
         
@@ -1275,7 +1261,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1289,19 +1275,19 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#007AFF">
+          <div class="day-event" style="--accent:#0057D9">
             <strong>验收</strong>南校区B座不锈钢栏杆更换工程
           </div>
         
-          <div class="day-event" style="--accent:#34C759">
+          <div class="day-event" style="--accent:#168A3A">
             <strong>验收</strong>南校区教室改造与粉刷项目
           </div>
         
-          <div class="day-event" style="--accent:#FF9500">
+          <div class="day-event" style="--accent:#E07A00">
             <strong>验收</strong>南校区A座换门工程
           </div>
         
@@ -1315,7 +1301,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1329,7 +1315,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1343,7 +1329,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1357,7 +1343,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1371,7 +1357,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1385,7 +1371,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1399,7 +1385,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1413,7 +1399,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1427,7 +1413,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1441,7 +1427,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1455,7 +1441,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1469,7 +1455,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1483,7 +1469,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1497,7 +1483,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1511,7 +1497,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1525,7 +1511,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1539,7 +1525,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1553,7 +1539,7 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
@@ -1567,31 +1553,31 @@
       </div>
       
       <div class="day-bars">
-        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#AF52DE"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#FF2D55"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#00C7BE"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#5856D6"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#FF3B30"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#30B0C7"></span>
+        <span class="day-bar" title="南校区宿舍2、3楼冲凉间防水维修改造项目" style="--accent:#7A3FE0"></span><span class="day-bar" title="南校区A座加固工程" style="--accent:#D10F6A"></span><span class="day-bar" title="南校区A座东西侧外墙改造" style="--accent:#008C8C"></span><span class="day-bar" title="南校区心理成长中心改造" style="--accent:#3448C5"></span><span class="day-bar" title="南校区运动空间改造工程" style="--accent:#C62828"></span><span class="day-bar" title="南校区阅读花园、运动花园改造工程" style="--accent:#5F6B1A"></span>
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#AF52DE">
+          <div class="day-event" style="--accent:#7A3FE0">
             <strong>工期止</strong>南校区宿舍2、3楼冲凉间防水维修改造项目
           </div>
         
-          <div class="day-event" style="--accent:#FF2D55">
+          <div class="day-event" style="--accent:#D10F6A">
             <strong>工期止</strong>南校区A座加固工程
           </div>
         
-          <div class="day-event" style="--accent:#00C7BE">
+          <div class="day-event" style="--accent:#008C8C">
             <strong>工期止</strong>南校区A座东西侧外墙改造
           </div>
         
-          <div class="day-event" style="--accent:#5856D6">
+          <div class="day-event" style="--accent:#3448C5">
             <strong>工期止</strong>南校区心理成长中心改造
           </div>
         
-          <div class="day-event" style="--accent:#FF3B30">
+          <div class="day-event" style="--accent:#C62828">
             <strong>工期止</strong>南校区运动空间改造工程
           </div>
         
-          <div class="day-event" style="--accent:#30B0C7">
+          <div class="day-event" style="--accent:#5F6B1A">
             <strong>工期止</strong>南校区阅读花园、运动花园改造工程
           </div>
         
@@ -1609,27 +1595,27 @@
       </div>
       <div class="day-events">
         
-          <div class="day-event" style="--accent:#AF52DE">
+          <div class="day-event" style="--accent:#7A3FE0">
             <strong>验收</strong>南校区宿舍2、3楼冲凉间防水维修改造项目
           </div>
         
-          <div class="day-event" style="--accent:#FF2D55">
+          <div class="day-event" style="--accent:#D10F6A">
             <strong>验收</strong>南校区A座加固工程
           </div>
         
-          <div class="day-event" style="--accent:#00C7BE">
+          <div class="day-event" style="--accent:#008C8C">
             <strong>验收</strong>南校区A座东西侧外墙改造
           </div>
         
-          <div class="day-event" style="--accent:#5856D6">
+          <div class="day-event" style="--accent:#3448C5">
             <strong>验收</strong>南校区心理成长中心改造
           </div>
         
-          <div class="day-event" style="--accent:#FF3B30">
+          <div class="day-event" style="--accent:#C62828">
             <strong>验收</strong>南校区运动空间改造工程
           </div>
         
-          <div class="day-event" style="--accent:#30B0C7">
+          <div class="day-event" style="--accent:#5F6B1A">
             <strong>验收</strong>南校区阅读花园、运动花园改造工程
           </div>
         
@@ -1852,39 +1838,39 @@
     </section>
     <section class="calendar-legend" aria-label="项目颜色图例">
       
-        <span style="--accent:#007AFF">
+        <span style="--accent:#0057D9">
           <i></i>南校区B座不锈钢栏杆更换工程
         </span>
       
-        <span style="--accent:#34C759">
+        <span style="--accent:#168A3A">
           <i></i>南校区教室改造与粉刷项目
         </span>
       
-        <span style="--accent:#FF9500">
+        <span style="--accent:#E07A00">
           <i></i>南校区A座换门工程
         </span>
       
-        <span style="--accent:#AF52DE">
+        <span style="--accent:#7A3FE0">
           <i></i>南校区宿舍2、3楼冲凉间防水维修改造项目
         </span>
       
-        <span style="--accent:#FF2D55">
+        <span style="--accent:#D10F6A">
           <i></i>南校区A座加固工程
         </span>
       
-        <span style="--accent:#00C7BE">
+        <span style="--accent:#008C8C">
           <i></i>南校区A座东西侧外墙改造
         </span>
       
-        <span style="--accent:#5856D6">
+        <span style="--accent:#3448C5">
           <i></i>南校区心理成长中心改造
         </span>
       
-        <span style="--accent:#FF3B30">
+        <span style="--accent:#C62828">
           <i></i>南校区运动空间改造工程
         </span>
       
-        <span style="--accent:#30B0C7">
+        <span style="--accent:#5F6B1A">
           <i></i>南校区阅读花园、运动花园改造工程
         </span>
       
@@ -1896,7 +1882,7 @@
       <p>按风险标签和跨项目联调事项整理</p>
     </section>
     <section class="focus-board">
-      <article class="focus-card" style="--accent:#34C759">
+      <article class="focus-card" style="--accent:#168A3A">
         <h4>南校区教室改造与粉刷项目</h4>
         <p>1、空调位置 2、照明尽量符合国标</p>
         <div class="focus-tags">
@@ -1904,7 +1890,7 @@
         </div>
       </article>
     
-      <article class="focus-card" style="--accent:#FF9500">
+      <article class="focus-card" style="--accent:#E07A00">
         <h4>南校区A座换门工程</h4>
         <p>1、财产安全 2、化学实验室外开门、带观察窗</p>
         <div class="focus-tags">
@@ -1912,7 +1898,7 @@
         </div>
       </article>
     
-      <article class="focus-card" style="--accent:#AF52DE">
+      <article class="focus-card" style="--accent:#7A3FE0">
         <h4>南校区宿舍2、3楼冲凉间防水维修改造项目</h4>
         <p>1、楼板薄注意敲掉瓷砖水泥时楼板情况 2、补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂 3、浴室洗手间潮湿，电线线路的防水防触电 4、教工不要放贵重物品在宿舍里的提醒，财产安全和施工...</p>
         <div class="focus-tags">
@@ -1920,7 +1906,7 @@
         </div>
       </article>
     
-      <article class="focus-card" style="--accent:#FF2D55">
+      <article class="focus-card" style="--accent:#D10F6A">
         <h4>南校区A座加固工程</h4>
         <p>1、A座供电线路到B座之间是否影响施工 2、打桩机入校，是否需先铲平花园 3、大门、通道等保护</p>
         <div class="focus-tags">
@@ -1928,7 +1914,7 @@
         </div>
       </article>
     
-      <article class="focus-card" style="--accent:#00C7BE">
+      <article class="focus-card" style="--accent:#008C8C">
         <h4>南校区A座东西侧外墙改造</h4>
         <p>1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工...</p>
         <div class="focus-tags">
@@ -1936,7 +1922,7 @@
         </div>
       </article>
     
-      <article class="focus-card" style="--accent:#5856D6">
+      <article class="focus-card" style="--accent:#3448C5">
         <h4>南校区心理成长中心改造</h4>
         <p>1、玻璃幕墙的安全性（沉降问题） 2、消防管漏水 3、西侧大门是否保留 ***4.幕墙方案需要与A座东西侧改造方案保持一致</p>
         <div class="focus-tags">
@@ -1952,35 +1938,35 @@
     
     <section class="memo-board">
       
-        <div class="memo-item" style="--accent:#FF9500">
+        <div class="memo-item" style="--accent:#E07A00">
           <i></i><span><b>南校区A座换门工程：</b>实验室搬迁仅含2扇门</span>
         </div>
       
-        <div class="memo-item" style="--accent:#FF2D55">
+        <div class="memo-item" style="--accent:#D10F6A">
           <i></i><span><b>南校区A座加固工程：</b>前期排查地下主电路网</span>
         </div>
       
-        <div class="memo-item" style="--accent:#00C7BE">
+        <div class="memo-item" style="--accent:#008C8C">
           <i></i><span><b>南校区A座东西侧外墙改造：</b>清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置</span>
         </div>
       
-        <div class="memo-item" style="--accent:#5856D6">
+        <div class="memo-item" style="--accent:#3448C5">
           <i></i><span><b>南校区心理成长中心改造：</b>与A座换门：心理中心西侧门是否保留？</span>
         </div>
       
-        <div class="memo-item" style="--accent:#5856D6">
+        <div class="memo-item" style="--accent:#3448C5">
           <i></i><span><b>南校区心理成长中心改造：</b>与A座幕墙：心理中心幕墙设计与A座幕墙设计一致性</span>
         </div>
       
-        <div class="memo-item" style="--accent:#FF3B30">
+        <div class="memo-item" style="--accent:#C62828">
           <i></i><span><b>南校区运动空间改造工程：</b>与A座换门：运动空间项目包含1楼4个门改造</span>
         </div>
       
-        <div class="memo-item" style="--accent:#FF3B30">
+        <div class="memo-item" style="--accent:#C62828">
           <i></i><span><b>南校区运动空间改造工程：</b>与A座加固：工序顺序及现场协调问题</span>
         </div>
       
-        <div class="memo-item" style="--accent:#30B0C7">
+        <div class="memo-item" style="--accent:#5F6B1A">
           <i></i><span><b>南校区阅读花园、运动花园改造工程：</b>与A座幕墙：幕墙落地处与花园地面平齐度</span>
         </div>
       
@@ -2065,7 +2051,7 @@
     <p class="source">数据来源：2026专项进度表.xlsx、2026专项前期准备及协调事宜.xlsx、26年总务项目联调备忘录.xlsx。页面为静态文件，可部署到 GitHub Pages；更新时重新读取最新表格并生成新版网页。</p>
   </main>
   <script>
-    const projects = [{"id":"p1","name":"南校区B座不锈钢栏杆更换工程","color":"#007AFF","status":"招标中","stage":"采购招标","progress":10,"tender":"招标中（采联）","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"暑假","coordination":"款式美观，安全性","importantItems":"安装必须保证足够牢固","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":[],"priorityIssue":"安装必须保证足够牢固","calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":[]},{"id":"p2","name":"南校区教室改造与粉刷项目","color":"#34C759","status":"开工准备","stage":"进场准备","progress":20,"tender":"（采联）中建港湾建设（深圳）有限公司","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"5月招标","coordination":"1、空调位置 2、照明尽量符合国标","importantItems":"","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同（已完成）"}],"memo":[],"priorityIssue":"空调位置","calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["场地移交"]},{"id":"p3","name":"南校区A座换门工程","color":"#FF9500","status":"新门定制中","stage":"材料定制","progress":50,"tender":"（振东）深圳建安建筑装饰集团有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"完成A座加固和东西侧玻璃幕墙后可实施","coordination":"噪声与周边社区沟通","importantItems":"1、财产安全 2、化学实验室外开门、带观察窗","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["实验室搬迁仅含2扇门"],"priorityIssue":"财产安全","calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["社区沟通","场地移交"]},{"id":"p4","name":"南校区宿舍2、3楼冲凉间防水维修改造项目","color":"#AF52DE","status":"开工准备","stage":"进场准备","progress":20,"tender":"（采联）深圳市世维建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假期间","coordination":"张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式","importantItems":"1、楼板薄注意敲掉瓷砖水泥时楼板情况 2、补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂 3、浴室洗手间潮湿，电线线路的防水防触电 4、教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":[],"priorityIssue":"楼板薄注意敲掉瓷砖水泥时楼板情况","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p5","name":"南校区A座加固工程","color":"#FF2D55","status":"招标中","stage":"采购招标","progress":10,"tender":"招标中（远东）2026年7月6日上午9时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、A座供电线路到B座之间是否影响施工 2、打桩机入校，是否需先铲平花园 3、大门、通道等保护","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["前期排查地下主电路网"],"priorityIssue":"A座供电线路到B座之间是否影响施工","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护"]},{"id":"p6","name":"南校区A座东西侧外墙改造","color":"#00C7BE","status":"招标中","stage":"采购招标","progress":10,"tender":"招标中（振东）2026年7月3日14时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置"],"priorityIssue":"前期物品搬离或保护","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p7","name":"南校区心理成长中心改造","color":"#5856D6","status":"开工准备","stage":"进场准备","progress":20,"tender":"（远东）深圳市深泰建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、玻璃幕墙的安全性（沉降问题） 2、消防管漏水 3、西侧大门是否保留 ***4.幕墙方案需要与A座东西侧改造方案保持一致","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：心理中心西侧门是否保留？","与A座幕墙：心理中心幕墙设计与A座幕墙设计一致性"],"priorityIssue":"玻璃幕墙的安全性（沉降问题）","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","结构与幕墙衔接"]},{"id":"p8","name":"南校区运动空间改造工程","color":"#FF3B30","status":"开工准备","stage":"进场准备","progress":20,"tender":"（中正）深圳市深泰建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、空调","prepImportantItems":"教学处化学实验室搬迁","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：运动空间项目包含1楼4个门改造","与A座加固：工序顺序及现场协调问题"],"priorityIssue":"空调","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","结构与幕墙衔接","场地移交"]},{"id":"p9","name":"南校区阅读花园、运动花园改造工程","color":"#30B0C7","status":"开工准备","stage":"进场准备","progress":20,"tender":"（采联）深圳市深泰建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、花园排水沟设计或位置变动 2、设计细化 3、与打桩加固的时间、施工等协调 4、A座到B座的主电缆、光纤井位置 5、雨棚单侧排水","prepImportantItems":"绿植（桂花为主）迁移 鼎和孔子讲学两个雕像 朗读亭","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座幕墙：幕墙落地处与花园地面平齐度"],"priorityIssue":"花园排水沟设计或位置变动","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护","结构与幕墙衔接"]}];
+    const projects = [{"id":"p1","name":"南校区B座不锈钢栏杆更换工程","color":"#0057D9","status":"招标中","stage":"采购招标","progress":10,"tender":"招标中（采联）","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"暑假","coordination":"款式美观，安全性","importantItems":"安装必须保证足够牢固","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":[],"priorityIssue":"安装必须保证足够牢固","calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":[]},{"id":"p2","name":"南校区教室改造与粉刷项目","color":"#168A3A","status":"开工准备","stage":"进场准备","progress":20,"tender":"（采联）中建港湾建设（深圳）有限公司","prepayment":"无预付","prepaymentState":"待确认","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"5月招标","coordination":"1、空调位置 2、照明尽量符合国标","importantItems":"","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同（已完成）"}],"memo":[],"priorityIssue":"空调位置","calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["场地移交"]},{"id":"p3","name":"南校区A座换门工程","color":"#E07A00","status":"新门定制中","stage":"材料定制","progress":50,"tender":"（振东）深圳建安建筑装饰集团有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月1日前后","schedule":"7月1日至7月30日","timing":"完成A座加固和东西侧玻璃幕墙后可实施","coordination":"噪声与周边社区沟通","importantItems":"1、财产安全 2、化学实验室外开门、带观察窗","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["实验室搬迁仅含2扇门"],"priorityIssue":"财产安全","calendar":{"start":"2026-07-01","end":"2026-07-30","acceptanceStart":"2026-08-01","acceptanceEnd":"2026-08-01"},"risks":["社区沟通","场地移交"]},{"id":"p4","name":"南校区宿舍2、3楼冲凉间防水维修改造项目","color":"#7A3FE0","status":"开工准备","stage":"进场准备","progress":20,"tender":"（采联）深圳市世维建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假期间","coordination":"张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式","importantItems":"1、楼板薄注意敲掉瓷砖水泥时楼板情况 2、补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂 3、浴室洗手间潮湿，电线线路的防水防触电 4、教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":[],"priorityIssue":"楼板薄注意敲掉瓷砖水泥时楼板情况","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p5","name":"南校区A座加固工程","color":"#D10F6A","status":"招标中","stage":"采购招标","progress":10,"tender":"招标中（远东）2026年7月6日上午9时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、A座供电线路到B座之间是否影响施工 2、打桩机入校，是否需先铲平花园 3、大门、通道等保护","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["前期排查地下主电路网"],"priorityIssue":"A座供电线路到B座之间是否影响施工","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护"]},{"id":"p6","name":"南校区A座东西侧外墙改造","color":"#008C8C","status":"招标中","stage":"采购招标","progress":10,"tender":"招标中（振东）2026年7月3日14时30分","prepayment":"预付30%未支付","prepaymentState":"未支付","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"中考结束","coordination":"噪声与周边社区沟通","importantItems":"1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标及预付款（进行中）"}],"memo":["清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置"],"priorityIssue":"前期物品搬离或保护","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","机电与核心设备保护"]},{"id":"p7","name":"南校区心理成长中心改造","color":"#3448C5","status":"开工准备","stage":"进场准备","progress":20,"tender":"（远东）深圳市深泰建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、玻璃幕墙的安全性（沉降问题） 2、消防管漏水 3、西侧大门是否保留 ***4.幕墙方案需要与A座东西侧改造方案保持一致","prepImportantItems":"","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：心理中心西侧门是否保留？","与A座幕墙：心理中心幕墙设计与A座幕墙设计一致性"],"priorityIssue":"玻璃幕墙的安全性（沉降问题）","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["施工及天气安全","社区沟通","结构与幕墙衔接"]},{"id":"p8","name":"南校区运动空间改造工程","color":"#C62828","status":"开工准备","stage":"进场准备","progress":20,"tender":"（中正）深圳市深泰建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、空调","prepImportantItems":"教学处化学实验室搬迁","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座换门：运动空间项目包含1楼4个门改造","与A座加固：工序顺序及现场协调问题"],"priorityIssue":"空调","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","结构与幕墙衔接","场地移交"]},{"id":"p9","name":"南校区阅读花园、运动花园改造工程","color":"#5F6B1A","status":"开工准备","stage":"进场准备","progress":20,"tender":"（采联）深圳市深泰建设工程有限公司","prepayment":"预付30%完成","prepaymentState":"已完成","acceptance":"8月21日至8月25日","schedule":"7月10日至8月20日","timing":"暑假","coordination":"噪声与周边社区沟通","importantItems":"1、花园排水沟设计或位置变动 2、设计细化 3、与打桩加固的时间、施工等协调 4、A座到B座的主电缆、光纤井位置 5、雨棚单侧排水","prepImportantItems":"绿植（桂花为主）迁移 鼎和孔子讲学两个雕像 朗读亭","monthActions":[{"month":"6月","text":"公开招标完成 签订合同及预付款（已完成）"}],"memo":["与A座幕墙：幕墙落地处与花园地面平齐度"],"priorityIssue":"花园排水沟设计或位置变动","calendar":{"start":"2026-07-10","end":"2026-08-20","acceptanceStart":"2026-08-21","acceptanceEnd":"2026-08-25"},"risks":["社区沟通","机电与核心设备保护","结构与幕墙衔接"]}];
     document.querySelectorAll("[data-filter]").forEach((button) => {
       button.addEventListener("click", () => {
         document.querySelectorAll("[data-filter]").forEach((item) => item.classList.remove("active"));
