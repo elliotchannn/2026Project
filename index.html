@@ -22,6 +22,11 @@
     h1 { margin: 0; font-size: clamp(36px, 5vw, 72px); line-height: 1.02; letter-spacing: 0; font-weight: 700; }
     .subtitle { margin: 18px 0 0; max-width: 720px; color: var(--muted); font-size: 18px; line-height: 1.55; }
     .update { justify-self: end; text-align: right; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .priority-brief { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 4px 0 18px; }
+    .priority-brief article { min-height: 116px; padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,.75); background: rgba(255,255,255,.78); box-shadow: var(--shadow); }
+    .priority-brief b { display: block; color: var(--muted); font-size: 13px; font-weight: 600; }
+    .priority-brief strong { display: block; margin: 8px 0 7px; font-size: 28px; line-height: 1; }
+    .priority-brief span { display: block; color: var(--ink); font-size: 13px; line-height: 1.45; }
     .summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 14px 0 28px; }
     .metric, .project-card, .panel, .calendar-month { background: var(--card); border: 1px solid rgba(255,255,255,.75); box-shadow: var(--shadow); backdrop-filter: blur(22px); border-radius: 8px; }
     .metric { padding: 18px; min-height: 118px; }
@@ -111,16 +116,31 @@
     @media (max-width: 980px) {
       header { grid-template-columns: 1fr; }
       .update { justify-self: start; text-align: left; }
+      .priority-brief { grid-template-columns: 1fr; }
       .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid, .panels, .calendar-wrap, .focus-board, .task-board { grid-template-columns: 1fr; }
       .weather-strip { grid-template-columns: 1fr; }
       .weather-tags { justify-content: flex-start; }
     }
     @media (max-width: 560px) {
-      .shell { padding: 18px 14px 40px; }
-      .summary { grid-template-columns: 1fr; }
+      .shell { padding: 12px 12px 40px; }
+      header { gap: 8px; padding: 10px 0 10px; }
+      h1 { font-size: 28px; line-height: 1.08; }
+      .subtitle { margin-top: 8px; font-size: 13px; line-height: 1.42; }
+      .update { font-size: 12px; line-height: 1.45; }
+      .priority-brief { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin: 4px 0 8px; }
+      .priority-brief article { min-height: 88px; padding: 9px 8px; overflow: hidden; }
+      .priority-brief b { font-size: 12px; }
+      .priority-brief strong { display: block; margin: 4px 0 4px; font-size: 19px; }
+      .priority-brief span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 11px; line-height: 1.25; }
+      .summary { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 8px 0 10px; }
+      .metric { min-height: 50px; padding: 8px 7px; }
+      .metric .label { font-size: 11px; }
+      .metric .value { margin-top: 4px; font-size: 18px; }
+      .metric .note { display: none; }
+      .toolbar { margin-bottom: 12px; gap: 7px; }
+      button { min-height: 32px; padding: 0 10px; font-size: 13px; }
       .meta { grid-template-columns: 1fr; }
-      h1 { font-size: 40px; }
       .calendar-day { min-height: 132px; padding: 6px; }
       .day-event { font-size: 10px; }
       .task-row { grid-template-columns: 1fr; }
@@ -133,13 +153,33 @@
     <header>
       <div>
         <h1>2026专项工程进度看板</h1>
-        <p class="subtitle">基于专项进度表、前期准备协调表和总务项目联调备忘录整合。每个工程使用独立代表色，便于快速识别状态、工期、费用和关键协调事项。</p>
+        <p class="subtitle">基于专项进度表、前期准备协调表和总务项目联调备忘录整合。每个工程使用独立代表色，便于快速识别节点、工期、风险和关键协调事项。</p>
       </div>
       <div class="update">
         数据日期：2026-06-30<br>
         进度为依据当前阶段的看板估算
       </div>
     </header>
+
+    
+    <section class="priority-brief" aria-label="首屏关注">
+      <article>
+        <b>近期启动</b>
+        <strong>3项</strong>
+        <span>B座不锈钢栏杆更换工程、教室改造与粉刷项目、A座换门工程</span>
+      </article>
+      <article>
+        <b>采购节点</b>
+        <strong>2项</strong>
+        <span>07-03 A座东西侧外墙改造；07-06 A座加固工程</span>
+      </article>
+      <article>
+        <b>天气关注</b>
+        <strong>3天</strong>
+        <span>06-30 雷阵雨/多云；07-02 多云/雷阵雨；07-03 中雨/中雨</span>
+      </article>
+    </section>
+  
 
     <section class="summary">
       <div class="metric"><div class="label">专项工程</div><div class="value">9</div><div class="note">纳入主看板</div></div>
@@ -177,7 +217,7 @@
             <div class="cell"><b>招标/合同情况</b><span>招标中（采联）</span></div>
             <div class="cell"><b>关键风险</b><span>暂无明显风险标签</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>款式美观，安全性</li></ul>
                 <b>重要事项</b><ul><li>安装必须保证足够牢固</li></ul>
@@ -207,7 +247,7 @@
             <div class="cell"><b>招标/合同情况</b><span>（采联）中建港湾建设（深圳）有限公司 ￥148,618.29</span></div>
             <div class="cell"><b>关键风险</b><span>场地移交</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>空调位置</li><li>照明尽量符合国标</li></ul>
                 <b>重要事项</b><span class="muted">暂无</span>
@@ -237,7 +277,7 @@
             <div class="cell"><b>招标/合同情况</b><span>（振东）深圳建安建筑装饰集团有限公司 ￥207,905.92</span></div>
             <div class="cell"><b>关键风险</b><span>社区沟通 · 场地移交</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>财产安全</li><li>化学实验室外开门、带观察窗</li></ul>
@@ -267,7 +307,7 @@
             <div class="cell"><b>招标/合同情况</b><span>（采联）深圳市世维建设工程有限公司 ￥ 289,678.76</span></div>
             <div class="cell"><b>关键风险</b><span>施工及天气安全 · 社区沟通 · 机电与核心设备保护</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式</li></ul>
                 <b>重要事项</b><ul><li>楼板薄注意敲掉瓷砖水泥时楼板情况</li><li>补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂</li><li>浴室洗手间潮湿，电线线路的防水防触电</li><li>教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。</li></ul>
@@ -297,7 +337,7 @@
             <div class="cell"><b>招标/合同情况</b><span>招标中（远东）2026年7月6日上午9时30分</span></div>
             <div class="cell"><b>关键风险</b><span>社区沟通 · 机电与核心设备保护</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>A座供电线路到B座之间是否影响施工</li><li>打桩机入校，是否需先铲平花园</li><li>大门、通道等保护</li></ul>
@@ -327,7 +367,7 @@
             <div class="cell"><b>招标/合同情况</b><span>招标中（振东）2026年7月3日14时30分</span></div>
             <div class="cell"><b>关键风险</b><span>施工及天气安全 · 社区沟通 · 机电与核心设备保护</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>前期物品搬离或保护</li><li>空调外机迁移复位，调试</li><li>幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接</li><li>施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾）</li><li>室内保护，尤其是核心机房保护</li><li>落地窗帘拆除恢复、天花拆除恢复</li><li>电焊等工序的消防安全，谨防火灾</li><li>外框架安装好后才能量尺寸定制玻璃，中间有空置期。</li></ul>
@@ -357,7 +397,7 @@
             <div class="cell"><b>招标/合同情况</b><span>（远东）深圳市深泰建设工程有限公司 ¥147,043.03</span></div>
             <div class="cell"><b>关键风险</b><span>施工及天气安全 · 社区沟通 · 结构与幕墙衔接</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>玻璃幕墙的安全性（沉降问题）</li><li>消防管漏水</li><li>西侧大门是否保留 ***</li><li>幕墙方案需要与A座东西侧改造方案保持一致</li></ul>
@@ -387,7 +427,7 @@
             <div class="cell"><b>招标/合同情况</b><span>（中正）深圳市深泰建设工程有限公司 ￥647470.08</span></div>
             <div class="cell"><b>关键风险</b><span>社区沟通 · 结构与幕墙衔接 · 场地移交</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>空调</li></ul>
@@ -417,7 +457,7 @@
             <div class="cell"><b>招标/合同情况</b><span>（采联）深圳市深泰建设工程有限公司 ￥882310.47</span></div>
             <div class="cell"><b>关键风险</b><span>社区沟通 · 机电与核心设备保护 · 结构与幕墙衔接</span></div>
             <details class="detail">
-              <summary>查看协调与费用明细</summary>
+              <summary>查看协调详情</summary>
               <div class="detail-content">
                 <b>协调事项</b><ul><li>噪声与周边社区沟通</li></ul>
                 <b>重要事项</b><ul><li>花园排水沟设计或位置变动</li><li>设计细化</li><li>与打桩加固的时间、施工等协调</li><li>A座到B座的主电缆、光纤井位置</li><li>雨棚单侧排水</li></ul>
