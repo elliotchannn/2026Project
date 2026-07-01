@@ -1,10 +1,9 @@
 {
   "generatedAt": "2026-07-01",
   "sources": [
-    "2026专项进度表.xlsx",
-    "2026专项前期准备及协调事宜.xlsx",
-    "26年总务项目联调备忘录.xlsx"
+    "2026专项前期准备及协调事宜（Google Sheet）"
   ],
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1_LlgcQkYNGQu_T9UZqw2rQXCZlXi0R2wGADcLG_sR1w",
   "summary": {
     "totalProjects": 9,
     "averageProgress": 20,
@@ -25,9 +24,9 @@
       "prepaymentState": "待确认",
       "acceptance": "8月1日前后",
       "schedule": "7月1日至7月30日",
-      "timing": "暑假",
-      "coordination": "款式美观，安全性",
-      "importantItems": "安装必须保证足够牢固",
+      "timing": "",
+      "coordination": "样式已确定，安全性",
+      "importantItems": "严格按照设计图纸施工，项目首要解决安全需求",
       "prepImportantItems": "",
       "monthActions": [
         {
@@ -36,7 +35,7 @@
         }
       ],
       "memo": [],
-      "priorityIssue": "安装必须保证足够牢固",
+      "priorityIssue": "严格按照设计图纸施工，项目首要解决安全需求",
       "calendar": {
         "start": "2026-07-01",
         "end": "2026-07-30",
@@ -57,8 +56,8 @@
       "prepaymentState": "待确认",
       "acceptance": "8月1日前后",
       "schedule": "7月1日至7月30日",
-      "timing": "5月招标",
-      "coordination": "1、空调位置 2、照明尽量符合国标",
+      "timing": "",
+      "coordination": "需要参照已有教室配置电气设备，照明设备必须符合相关要求",
       "importantItems": "",
       "prepImportantItems": "",
       "monthActions": [
@@ -68,16 +67,14 @@
         }
       ],
       "memo": [],
-      "priorityIssue": "空调位置",
+      "priorityIssue": "需要参照已有教室配置电气设备，照明设备必须符合相关要求",
       "calendar": {
         "start": "2026-07-01",
         "end": "2026-07-30",
         "acceptanceStart": "2026-08-01",
         "acceptanceEnd": "2026-08-01"
       },
-      "risks": [
-        "场地移交"
-      ]
+      "risks": []
     },
     {
       "id": "p3",
@@ -91,7 +88,7 @@
       "prepaymentState": "已完成",
       "acceptance": "8月1日前后",
       "schedule": "7月1日至7月30日",
-      "timing": "完成A座加固和东西侧玻璃幕墙后可实施",
+      "timing": "",
       "coordination": "噪声与周边社区沟通",
       "importantItems": "1、财产安全 2、化学实验室外开门、带观察窗",
       "prepImportantItems": "",
@@ -128,7 +125,7 @@
       "prepaymentState": "已完成",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
-      "timing": "暑假期间",
+      "timing": "",
       "coordination": "张贴维修公告，告知住户噪音最多的日期与时间段，施工项目经理联系方式，学校管理联系方式，社区联系方式",
       "importantItems": "1、楼板薄注意敲掉瓷砖水泥时楼板情况 2、补漏要求高，排水管位置需方便检修疏通，避免漏到楼下食堂 3、浴室洗手间潮湿，电线线路的防水防触电 4、教工不要放贵重物品在宿舍里的提醒，财产安全和施工监管、施工安全。",
       "prepImportantItems": "",
@@ -164,7 +161,7 @@
       "prepaymentState": "未支付",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
-      "timing": "中考结束",
+      "timing": "",
       "coordination": "噪声与周边社区沟通",
       "importantItems": "1、A座供电线路到B座之间是否影响施工 2、打桩机入校，是否需先铲平花园 3、大门、通道等保护",
       "prepImportantItems": "",
@@ -201,7 +198,7 @@
       "prepaymentState": "未支付",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
-      "timing": "中考结束",
+      "timing": "",
       "coordination": "噪声与周边社区沟通",
       "importantItems": "1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。",
       "prepImportantItems": "",
@@ -239,7 +236,7 @@
       "prepaymentState": "已完成",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
-      "timing": "暑假",
+      "timing": "",
       "coordination": "噪声与周边社区沟通",
       "importantItems": "1、玻璃幕墙的安全性（沉降问题） 2、消防管漏水 3、西侧大门是否保留 ***4.幕墙方案需要与A座东西侧改造方案保持一致",
       "prepImportantItems": "",
@@ -278,7 +275,7 @@
       "prepaymentState": "已完成",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
-      "timing": "暑假",
+      "timing": "",
       "coordination": "噪声与周边社区沟通",
       "importantItems": "1、空调",
       "prepImportantItems": "教学处化学实验室搬迁",
@@ -317,7 +314,7 @@
       "prepaymentState": "已完成",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
-      "timing": "暑假",
+      "timing": "",
       "coordination": "噪声与周边社区沟通",
       "importantItems": "1、花园排水沟设计或位置变动 2、设计细化 3、与打桩加固的时间、施工等协调 4、A座到B座的主电缆、光纤井位置 5、雨棚单侧排水",
       "prepImportantItems": "绿植（桂花为主）迁移 鼎和孔子讲学两个雕像 朗读亭",
@@ -346,43 +343,7 @@
   ],
   "otherRecords": [
     {
-      "name": "教学处：图书馆1、2楼改造",
-      "coordination": "图书馆分发图书位置（乒乓球室、阶梯教室）",
-      "importantItems": "新建楼梯的结构安全 玻璃幕墙的安全性（沉降问题） 涉及到结构变更，必须审图和必须有监理 原食堂位置是否有开通管道煤气，是否有煤气管道，是否已经在校外封闭。 ——生活服务中心 自动售卖机迁移到学生食堂西侧 东侧大门是否拆除封闭 ***幕墙玻璃方案参考A座东西侧改造设计",
-      "schedule": ""
-    },
-    {
-      "name": "教学处：化学实验室搬迁",
-      "coordination": "",
-      "importantItems": "如果是五楼，美术教室重新安排，原有家具如果处理？ 如果是六楼，需申请拆墙与重新装修 ——已确定5楼、教学处正在推动原4楼美术办公室改造成美术功能室的前期预算，原有门是否保留还是换门",
-      "schedule": ""
-    },
-    {
-      "name": "学生处：校医室改造",
-      "coordination": "",
-      "importantItems": "空调",
-      "schedule": ""
-    },
-    {
-      "name": "生活服务中心：食堂改造",
-      "coordination": "",
-      "importantItems": "1、无经费放明年预算 2、自动售卖机位置迁移",
-      "schedule": ""
-    },
-    {
-      "name": "水务局优质饮用水改造",
-      "coordination": "",
-      "importantItems": "时间协调",
-      "schedule": "待定"
-    },
-    {
-      "name": "办公室搬运",
-      "coordination": "直饮水机迁移、家具拆装搬运",
-      "importantItems": "已完成",
-      "schedule": "待定"
-    },
-    {
-      "name": "初三18个班",
+      "name": "课桌椅迁移",
       "coordination": "课桌椅",
       "importantItems": "全部采购或4个班级，款式？或者新初三年级桌椅搬到C座，初一年级明年专项采购？福田区借用？ ——新初三课桌椅搬到新教室，原初三课桌椅换到新初一，部分更换面板、采购少量课桌椅架更换，清洁，搬运等。明年预算采购一个年级课桌椅。",
       "schedule": "待定"
