@@ -1,9 +1,16 @@
 {
-  "generatedAt": "2026-07-02",
+  "generatedAt": "2026-07-03",
   "sources": [
-    "2026专项前期准备及协调事宜（Google Sheet）"
+    "2026专项前期准备及协调事宜（Google Sheet 实时快照）"
   ],
   "sourceUrl": "https://docs.google.com/spreadsheets/d/1_LlgcQkYNGQu_T9UZqw2rQXCZlXi0R2wGADcLG_sR1w",
+  "departmentColors": {
+    "总务处": "#0057D9",
+    "教学处": "#168A3A",
+    "学生处": "#E07A00",
+    "生活服务中心": "#7A3FE0",
+    "未归属部门": "#D10F6A"
+  },
   "summary": {
     "totalProjects": 9,
     "averageProgress": 20,
@@ -15,7 +22,7 @@
     {
       "id": "p1",
       "name": "南校区B座不锈钢栏杆更换工程",
-      "color": "#0057D9",
+      "department": "总务处",
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
@@ -23,7 +30,7 @@
       "prepayment": "无预付",
       "prepaymentState": "待确认",
       "acceptance": "8月1日前后",
-      "schedule": "7月1日至7月30日",
+      "schedule": "7月20日至8月20日",
       "timing": "",
       "coordination": "样式已确定，安全性",
       "importantItems": "严格按照设计图纸施工，项目首要解决安全需求",
@@ -37,17 +44,18 @@
       "memo": [],
       "priorityIssue": "严格按照设计图纸施工，项目首要解决安全需求",
       "calendar": {
-        "start": "2026-07-01",
-        "end": "2026-07-30",
+        "start": "2026-07-20",
+        "end": "2026-08-20",
         "acceptanceStart": "2026-08-01",
         "acceptanceEnd": "2026-08-01"
       },
-      "risks": []
+      "risks": [],
+      "color": "#0057D9"
     },
     {
       "id": "p2",
       "name": "南校区教室改造与粉刷项目",
-      "color": "#168A3A",
+      "department": "总务处",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -78,12 +86,13 @@
         "acceptanceStart": "2026-08-01",
         "acceptanceEnd": "2026-08-01"
       },
-      "risks": []
+      "risks": [],
+      "color": "#0057D9"
     },
     {
       "id": "p3",
       "name": "南校区A座换门工程",
-      "color": "#E07A00",
+      "department": "总务处",
       "status": "新门定制中",
       "stage": "材料定制",
       "progress": 50,
@@ -119,12 +128,13 @@
       "risks": [
         "社区沟通",
         "场地移交"
-      ]
+      ],
+      "color": "#0057D9"
     },
     {
       "id": "p4",
       "name": "南校区宿舍2、3楼冲凉间防水维修改造项目",
-      "color": "#7A3FE0",
+      "department": "总务处",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -159,12 +169,13 @@
         "施工及天气安全",
         "社区沟通",
         "机电与核心设备保护"
-      ]
+      ],
+      "color": "#0057D9"
     },
     {
       "id": "p5",
       "name": "南校区A座加固工程",
-      "color": "#D10F6A",
+      "department": "总务处",
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
@@ -200,12 +211,13 @@
       "risks": [
         "社区沟通",
         "机电与核心设备保护"
-      ]
+      ],
+      "color": "#0057D9"
     },
     {
       "id": "p6",
       "name": "南校区A座东西侧外墙改造",
-      "color": "#008C8C",
+      "department": "总务处",
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
@@ -238,12 +250,13 @@
         "施工及天气安全",
         "社区沟通",
         "机电与核心设备保护"
-      ]
+      ],
+      "color": "#0057D9"
     },
     {
       "id": "p7",
       "name": "南校区心理成长中心改造",
-      "color": "#3448C5",
+      "department": "总务处",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -281,12 +294,13 @@
         "施工及天气安全",
         "社区沟通",
         "结构与幕墙衔接"
-      ]
+      ],
+      "color": "#0057D9"
     },
     {
       "id": "p8",
       "name": "南校区运动空间改造工程",
-      "color": "#C62828",
+      "department": "总务处",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -297,7 +311,7 @@
       "schedule": "7月10日至8月20日",
       "timing": "",
       "coordination": "噪声与周边社区沟通",
-      "importantItems": "1、空调",
+      "importantItems": "1、与其他项目交叉进行需要协调",
       "prepImportantItems": "教学处化学实验室搬迁（进行中）",
       "monthActions": [
         {
@@ -313,7 +327,7 @@
         "与A座换门：运动空间项目包含1楼4个门改造",
         "与A座加固：工序顺序及现场协调问题"
       ],
-      "priorityIssue": "空调",
+      "priorityIssue": "与其他项目交叉进行需要协调",
       "calendar": {
         "start": "2026-07-10",
         "end": "2026-08-20",
@@ -324,12 +338,13 @@
         "社区沟通",
         "结构与幕墙衔接",
         "场地移交"
-      ]
+      ],
+      "color": "#0057D9"
     },
     {
       "id": "p9",
       "name": "南校区阅读花园、运动花园改造工程",
-      "color": "#5F6B1A",
+      "department": "总务处",
       "status": "开工准备",
       "stage": "进场准备",
       "progress": 20,
@@ -366,29 +381,66 @@
         "社区沟通",
         "机电与核心设备保护",
         "结构与幕墙衔接"
-      ]
+      ],
+      "color": "#0057D9"
     }
   ],
   "otherRecords": [
     {
       "name": "课桌椅迁移",
+      "department": "总务处",
+      "color": "#0057D9",
       "coordination": "课桌椅",
       "importantItems": "全部采购或4个班级，款式？或者新初三年级桌椅搬到C座，初一年级明年专项采购？福田区借用？ ——新初三课桌椅搬到新教室，原初三课桌椅换到新初一，部分更换面板、采购少量课桌椅架更换，清洁，搬运等。明年预算采购一个年级课桌椅。",
       "schedule": "待定"
+    },
+    {
+      "name": "教学处：图书馆1、2楼改造",
+      "department": "教学处",
+      "color": "#168A3A",
+      "coordination": "",
+      "importantItems": "图书馆分发图书位置（乒乓球室、阶梯教室）",
+      "schedule": ""
+    },
+    {
+      "name": "教学处：化学实验室搬迁",
+      "department": "教学处",
+      "color": "#168A3A",
+      "coordination": "",
+      "importantItems": "",
+      "schedule": ""
+    },
+    {
+      "name": "学生处：校医室改造",
+      "department": "学生处",
+      "color": "#E07A00",
+      "coordination": "",
+      "importantItems": "",
+      "schedule": ""
+    },
+    {
+      "name": "食堂改造",
+      "department": "生活服务中心",
+      "color": "#7A3FE0",
+      "coordination": "",
+      "importantItems": "",
+      "schedule": ""
+    },
+    {
+      "name": "水务局优质饮用水改造",
+      "department": "未归属部门",
+      "color": "#D10F6A",
+      "coordination": "",
+      "importantItems": "",
+      "schedule": ""
     }
   ],
-  "generalRisks": [
-    "校园施工期间的财产安全： 1、电脑和打印机及其他贵重物品的存放 2、监控系统保证能够正常使用，应如何处理 3、核心机房如需正常使用，如何处理 4、所有位置关闭门窗，损坏无法关闭门窗的前期处理",
-    "周边社区提前告知，施工期间舆情管理与居民安抚（宿舍淋浴间已告知新洲城物业）",
-    "现场走访福田区进行过抗震加固的学校，向有经验的总务主任请教设计、施工、验收等全流程的管理和潜在风险点",
-    "台风暴雨天气影响，尤其是核心机房设备保护",
-    "协调各个区域待报废设备与家具的搬运、报废等事宜（2026-06-29开始进行中）"
-  ],
+  "generalRisks": [],
   "weather": {
     "location": "深圳市福田区",
     "updatedAt": "2026-06-30 20:00",
     "source": "中国气象局深圳城市预报",
-    "note": "短期预报已同步至7月6日；7月7日之后待临近施工日期更新。",
+    "note": "短期预报已同步至7月6日；GitHub Actions 将每天北京时间 06:00 自动刷新天气缓存。",
     "daily": [
       {
         "date": "2026-06-30",
