@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04",
+  "generatedAt": "2026-07-06",
   "sources": [
     "2026专项前期准备及协调事宜（Google Sheet 实时快照）"
   ],
@@ -32,7 +32,7 @@
       "tender": "招标中（采联）2026年7月14日9时30分",
       "prepayment": "无预付",
       "prepaymentState": "待确认",
-      "acceptance": "8月1日前后",
+      "acceptance": "8月1日",
       "schedule": "7月20日至8月20日",
       "timing": "",
       "coordination": "样式已确定，安全性",
@@ -67,7 +67,7 @@
       "tender": "（采联）中建港湾建设（深圳）有限公司",
       "prepayment": "无预付",
       "prepaymentState": "待确认",
-      "acceptance": "8月1日前后",
+      "acceptance": "8月1日",
       "schedule": "7月1日至7月30日",
       "timing": "",
       "coordination": "需要参照已有教室配置电气设备，照明设备必须符合相关要求",
@@ -106,7 +106,7 @@
       "tender": "（振东）深圳建安建筑装饰集团有限公司",
       "prepayment": "预付30%完成",
       "prepaymentState": "已完成",
-      "acceptance": "8月1日前后",
+      "acceptance": "8月1日",
       "schedule": "7月1日至7月30日",
       "timing": "",
       "coordination": "噪声与周边社区沟通",
@@ -234,14 +234,14 @@
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
-      "tender": "招标中（振东）2026年7月3日14时30分",
+      "tender": "（振东）深圳市侨城建安工程有限公司",
       "prepayment": "预付30%未支付",
       "prepaymentState": "未支付",
       "acceptance": "8月21日至8月25日",
       "schedule": "7月10日至8月20日",
       "timing": "",
       "coordination": "噪声与周边社区沟通",
-      "importantItems": "1、前期物品搬离或保护 2、空调外机迁移复位，调试 3、幕墙玻璃安全性，玻璃材质厚度、断桥铝？重量、安装承重、与梁柱的连接 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。",
+      "importantItems": "1、前期物品搬离或保护 2、空调外机迁移 3、设计方案现中标价能否完成 4、施工安全（台风、暴雨、大风等极端天气的影响）、消防安全（电焊等工序的消防安全，谨防火灾） 5、室内保护，尤其是核心机房保护 6、落地窗帘拆除恢复、天花拆除恢复 6、电焊等工序的消防安全，谨防火灾 7、外框架安装好后才能量尺寸定制玻璃，中间有空置期。",
       "prepImportantItems": "",
       "monthActions": [
         {
@@ -409,14 +409,14 @@
       "department": "总务处",
       "sourceType": "部门事项",
       "isPrimary": false,
-      "status": "待协调",
-      "stage": "待协调",
+      "status": "前期完成",
+      "stage": "前期完成",
       "progress": null,
       "tender": "",
       "prepayment": "",
       "prepaymentState": "待确认",
       "acceptance": "",
-      "schedule": "待定",
+      "schedule": "预计7月教室改造完成后进行迁移",
       "timing": "",
       "coordination": "课桌椅",
       "importantItems": "全部采购或4个班级，款式？或者新初三年级桌椅搬到C座，初一年级明年专项采购？福田区借用？ ——新初三课桌椅搬到新教室，原初三课桌椅换到新初一，部分更换面板、采购少量课桌椅架更换，清洁，搬运等。明年预算采购一个年级课桌椅。",
@@ -424,7 +424,11 @@
       "monthActions": [
         {
           "month": "6月",
-          "text": "待定"
+          "text": "无"
+        },
+        {
+          "month": "7月",
+          "text": "无"
         }
       ],
       "memo": [],
@@ -485,7 +489,7 @@
       "prepayment": "",
       "prepaymentState": "待确认",
       "acceptance": "",
-      "schedule": "",
+      "schedule": "7月5日至7月24日",
       "timing": "",
       "coordination": "",
       "importantItems": "",
@@ -494,8 +498,8 @@
       "memo": [],
       "priorityIssue": "教学处正在推动原4楼美术办公室改造成美术功能室的前期预算，原有门是否保留还是换门",
       "calendar": {
-        "start": null,
-        "end": null,
+        "start": "2026-07-05",
+        "end": "2026-07-24",
         "acceptanceStart": null,
         "acceptanceEnd": null
       },
@@ -515,7 +519,7 @@
       "prepayment": "",
       "prepaymentState": "待确认",
       "acceptance": "",
-      "schedule": "",
+      "schedule": "7月11日至8月11日",
       "timing": "",
       "coordination": "",
       "importantItems": "",
@@ -529,8 +533,8 @@
       "memo": [],
       "priorityIssue": "空调",
       "calendar": {
-        "start": null,
-        "end": null,
+        "start": "2026-07-11",
+        "end": "2026-08-11",
         "acceptanceStart": null,
         "acceptanceEnd": null
       },
@@ -556,10 +560,10 @@
       "timing": "",
       "coordination": "",
       "importantItems": "",
-      "prepImportantItems": "1、无经费放明年预算 2、自动售卖机位置迁移",
+      "prepImportantItems": "自动售卖机位置迁移、与明年栈道扩充项目是否冲突",
       "monthActions": [],
       "memo": [],
-      "priorityIssue": "无经费放明年预算",
+      "priorityIssue": "自动售卖机位置迁移、与明年栈道扩充项目是否冲突",
       "calendar": {
         "start": null,
         "end": null,
