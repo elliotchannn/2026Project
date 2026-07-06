@@ -9,15 +9,16 @@
     "教学处": "#168A3A",
     "学生处": "#E07A00",
     "生活服务中心": "#7A3FE0",
-    "未归属部门": "#D10F6A"
+    "安全处": "#D10F6A",
+    "信息中心": "#008C8C"
   },
   "summary": {
-    "totalProjects": 15,
+    "totalProjects": 18,
     "averageProgress": 20,
     "bidding": 3,
     "preparing": 5,
     "custom": 1,
-    "departmentItems": 6
+    "departmentItems": 9
   },
   "projects": [
     {
@@ -190,7 +191,7 @@
       "status": "招标中",
       "stage": "采购招标",
       "progress": 10,
-      "tender": "招标中（远东）2026年7月6日上午9时30分",
+      "tender": "招标中（远东）",
       "prepayment": "预付30%未支付",
       "prepaymentState": "未支付",
       "acceptance": "8月21日至8月25日",
@@ -246,11 +247,15 @@
       "monthActions": [
         {
           "month": "6月",
-          "text": "公开招标及预付款（进行中）"
+          "text": "公开招标（已完成）"
+        },
+        {
+          "month": "7月",
+          "text": "可能来不及完成第一次付款"
         }
       ],
       "memo": [
-        "清空、封板、空调外机、玻璃定制需时、玻璃窗开启位置"
+        "清空、封板、空调外机、玻璃定制需时、确认开窗位置"
       ],
       "priorityIssue": "前期物品搬离或保护",
       "calendar": {
@@ -444,7 +449,7 @@
     },
     {
       "id": "s2",
-      "name": "教学处：图书馆1、2楼改造",
+      "name": "图书馆1、2楼改造",
       "department": "教学处",
       "sourceType": "部门事项",
       "isPrimary": false,
@@ -459,7 +464,7 @@
       "timing": "",
       "coordination": "",
       "importantItems": "图书馆分发图书位置（乒乓球室、阶梯教室）",
-      "prepImportantItems": "新建楼梯的结构安全 玻璃幕墙的安全性（沉降问题） 涉及到结构变更，必须审图和必须有监理 原食堂位置是否有开通管道煤气，是否有煤气管道，是否已经在校外封闭。 ——生活服务中心 自动售卖机迁移到学生食堂西侧 东侧大门是否拆除封闭 ***幕墙玻璃方案参考A座东西侧改造设计",
+      "prepImportantItems": "新建楼梯的结构安全 涉及到结构变更，必须审图和必须有监理 原食堂位置是否有开通管道煤气，是否有煤气管道，是否已经在校外封闭。 幕墙玻璃方案按照A座东西侧改造设计",
       "monthActions": [],
       "memo": [
         "与A座幕墙：图书馆1、2楼幕墙设计与A座幕墙设计一致性"
@@ -478,7 +483,7 @@
     },
     {
       "id": "s3",
-      "name": "教学处：化学实验室搬迁",
+      "name": "化学实验室搬迁",
       "department": "教学处",
       "sourceType": "部门事项",
       "isPrimary": false,
@@ -493,10 +498,10 @@
       "timing": "",
       "coordination": "",
       "importantItems": "",
-      "prepImportantItems": "教学处正在推动原4楼美术办公室改造成美术功能室的前期预算，原有门是否保留还是换门",
+      "prepImportantItems": "美术办公室改造成教室中、但未预算到门的更换",
       "monthActions": [],
       "memo": [],
-      "priorityIssue": "教学处正在推动原4楼美术办公室改造成美术功能室的前期预算，原有门是否保留还是换门",
+      "priorityIssue": "美术办公室改造成教室中、但未预算到门的更换",
       "calendar": {
         "start": "2026-07-05",
         "end": "2026-07-24",
@@ -545,7 +550,7 @@
     },
     {
       "id": "s5",
-      "name": "食堂改造",
+      "name": "就餐位置增加、售卖机迁移",
       "department": "生活服务中心",
       "sourceType": "部门事项",
       "isPrimary": false,
@@ -556,7 +561,7 @@
       "prepayment": "",
       "prepaymentState": "待确认",
       "acceptance": "",
-      "schedule": "",
+      "schedule": "7月10日至7月12日",
       "timing": "",
       "coordination": "",
       "importantItems": "",
@@ -565,8 +570,8 @@
       "memo": [],
       "priorityIssue": "自动售卖机位置迁移、与明年栈道扩充项目是否冲突",
       "calendar": {
-        "start": null,
-        "end": null,
+        "start": "2026-07-10",
+        "end": "2026-07-12",
         "acceptanceStart": null,
         "acceptanceEnd": null
       },
@@ -576,7 +581,7 @@
     {
       "id": "s6",
       "name": "水务局优质饮用水改造",
-      "department": "未归属部门",
+      "department": "总务处",
       "sourceType": "部门事项",
       "isPrimary": false,
       "status": "待协调",
@@ -586,7 +591,7 @@
       "prepayment": "",
       "prepaymentState": "待确认",
       "acceptance": "",
-      "schedule": "",
+      "schedule": "具体施工时间等细节等待水务局通知",
       "timing": "",
       "coordination": "",
       "importantItems": "",
@@ -610,7 +615,97 @@
         "acceptanceEnd": null
       },
       "risks": [],
+      "color": "#0057D9"
+    },
+    {
+      "id": "s7",
+      "name": "C208安全指挥中心",
+      "department": "安全处",
+      "sourceType": "部门事项",
+      "isPrimary": false,
+      "status": "部门跟进",
+      "stage": "部门跟进",
+      "progress": null,
+      "tender": "",
+      "prepayment": "",
+      "prepaymentState": "待确认",
+      "acceptance": "",
+      "schedule": "7月11日至8月1日",
+      "timing": "",
+      "coordination": "",
+      "importantItems": "设备安装规范性（电）",
+      "prepImportantItems": "需要联用C207、与信息中心沟通",
+      "monthActions": [],
+      "memo": [],
+      "priorityIssue": "设备安装规范性（电）",
+      "calendar": {
+        "start": "2026-07-11",
+        "end": "2026-08-01",
+        "acceptanceStart": null,
+        "acceptanceEnd": null
+      },
+      "risks": [],
       "color": "#D10F6A"
+    },
+    {
+      "id": "s8",
+      "name": "校门口安全改造",
+      "department": "安全处",
+      "sourceType": "部门事项",
+      "isPrimary": false,
+      "status": "待协调",
+      "stage": "待协调",
+      "progress": null,
+      "tender": "",
+      "prepayment": "",
+      "prepaymentState": "待确认",
+      "acceptance": "",
+      "schedule": "待定",
+      "timing": "",
+      "coordination": "",
+      "importantItems": "",
+      "prepImportantItems": "",
+      "monthActions": [],
+      "memo": [],
+      "priorityIssue": "暂无高优先级问题",
+      "calendar": {
+        "start": null,
+        "end": null,
+        "acceptanceStart": null,
+        "acceptanceEnd": null
+      },
+      "risks": [],
+      "color": "#D10F6A"
+    },
+    {
+      "id": "s9",
+      "name": "音响设备及光线安装",
+      "department": "信息中心",
+      "sourceType": "部门事项",
+      "isPrimary": false,
+      "status": "部门跟进",
+      "stage": "部门跟进",
+      "progress": null,
+      "tender": "",
+      "prepayment": "",
+      "prepaymentState": "待确认",
+      "acceptance": "",
+      "schedule": "7月8日至7月31日",
+      "timing": "",
+      "coordination": "",
+      "importantItems": "设备安装规范性（电）",
+      "prepImportantItems": "",
+      "monthActions": [],
+      "memo": [],
+      "priorityIssue": "设备安装规范性（电）",
+      "calendar": {
+        "start": "2026-07-08",
+        "end": "2026-07-31",
+        "acceptanceStart": null,
+        "acceptanceEnd": null
+      },
+      "risks": [],
+      "color": "#008C8C"
     }
   ],
   "otherRecords": [],
@@ -692,12 +787,5 @@
       "强对流"
     ]
   },
-  "keyMilestones": [
-    {
-      "date": "2026-07-09",
-      "label": "联调会",
-      "detail": "施工联调会（深泰建设、创能）",
-      "color": "#111827"
-    }
-  ]
+  "keyMilestones": []
 }
