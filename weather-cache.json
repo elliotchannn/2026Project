@@ -1,18 +1,9 @@
 {
   "location": "深圳市福田区",
-  "updatedAt": "2026-09-10 07:36",
+  "updatedAt": "2026-09-11 07:29",
   "source": "Open-Meteo Forecast API（深圳福田坐标）",
   "note": "天气由 GitHub Actions 每天北京时间 06:00 自动更新；用于施工窗口风险提示。",
   "daily": [
-    {
-      "date": "2026-09-10",
-      "weekday": "星期三",
-      "day": "阵雨",
-      "night": "降雨概率94%",
-      "high": 30,
-      "low": 22,
-      "wind": "最大风速13km/h"
-    },
     {
       "date": "2026-09-11",
       "weekday": "星期四",
@@ -20,23 +11,23 @@
       "night": "夜间关注",
       "high": 31,
       "low": 23,
-      "wind": "最大风速14km/h"
+      "wind": "最大风速15km/h"
     },
     {
       "date": "2026-09-12",
       "weekday": "星期五",
       "day": "阵雨",
-      "night": "降雨概率65%",
+      "night": "降雨概率67%",
       "high": 31,
       "low": 23,
-      "wind": "最大风速19km/h"
+      "wind": "最大风速17km/h"
     },
     {
       "date": "2026-09-13",
       "weekday": "星期六",
       "day": "雷阵雨",
       "night": "降雨概率95%",
-      "high": 28,
+      "high": 30,
       "low": 24,
       "wind": "最大风速17km/h"
     },
@@ -44,55 +35,64 @@
       "date": "2026-09-14",
       "weekday": "星期日",
       "day": "雷阵雨",
-      "night": "降雨概率84%",
-      "high": 30,
-      "low": 24,
-      "wind": "最大风速13km/h"
+      "night": "降雨概率82%",
+      "high": 31,
+      "low": 23,
+      "wind": "最大风速9km/h"
     },
     {
       "date": "2026-09-15",
       "weekday": "星期一",
       "day": "雷阵雨",
-      "night": "降雨概率80%",
+      "night": "降雨概率90%",
       "high": 31,
-      "low": 23,
-      "wind": "最大风速7km/h"
+      "low": 24,
+      "wind": "最大风速8km/h"
     },
     {
       "date": "2026-09-16",
       "weekday": "星期二",
-      "day": "毛毛雨",
-      "night": "降雨概率76%",
+      "day": "雷阵雨",
+      "night": "降雨概率70%",
       "high": 31,
       "low": 23,
-      "wind": "最大风速9km/h"
+      "wind": "最大风速8km/h"
     },
     {
       "date": "2026-09-17",
       "weekday": "星期三",
       "day": "毛毛雨",
-      "night": "降雨概率56%",
-      "high": 30,
+      "night": "降雨概率57%",
+      "high": 32,
       "low": 25,
-      "wind": "最大风速9km/h"
+      "wind": "最大风速10km/h"
     },
     {
       "date": "2026-09-18",
       "weekday": "星期四",
       "day": "毛毛雨",
-      "night": "降雨概率53%",
-      "high": 28,
+      "night": "降雨概率54%",
+      "high": 31,
       "low": 25,
-      "wind": "最大风速11km/h"
+      "wind": "最大风速8km/h"
     },
     {
       "date": "2026-09-19",
       "weekday": "星期五",
-      "day": "毛毛雨",
-      "night": "降雨概率50%",
-      "high": 31,
+      "day": "雷阵雨",
+      "night": "降雨概率61%",
+      "high": 32,
+      "low": 26,
+      "wind": "最大风速8km/h"
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "星期六",
+      "day": "多云",
+      "night": "夜间关注",
+      "high": 32,
       "low": 25,
-      "wind": "最大风速7km/h"
+      "wind": "最大风速9km/h"
     }
   ],
   "watchItems": [
