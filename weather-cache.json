@@ -1,26 +1,17 @@
 {
   "location": "深圳市福田区",
-  "updatedAt": "2026-10-29 09:20",
+  "updatedAt": "2026-10-30 09:24",
   "source": "Open-Meteo Forecast API（深圳福田坐标）",
   "note": "天气由 GitHub Actions 每天北京时间 06:00 自动更新；用于施工窗口风险提示。",
   "daily": [
     {
-      "date": "2026-10-29",
-      "weekday": "星期三",
-      "day": "阴",
-      "night": "夜间关注",
-      "high": 31,
-      "low": 23,
-      "wind": "最大风速13km/h"
-    },
-    {
       "date": "2026-10-30",
       "weekday": "星期四",
-      "day": "阴",
+      "day": "多云",
       "night": "夜间关注",
       "high": 32,
       "low": 22,
-      "wind": "最大风速10km/h"
+      "wind": "最大风速9km/h"
     },
     {
       "date": "2026-10-31",
@@ -29,25 +20,25 @@
       "night": "夜间关注",
       "high": 29,
       "low": 22,
-      "wind": "最大风速15km/h"
+      "wind": "最大风速14km/h"
     },
     {
       "date": "2026-11-01",
       "weekday": "星期六",
       "day": "毛毛雨",
-      "night": "降雨概率53%",
+      "night": "夜间关注",
       "high": 29,
       "low": 24,
-      "wind": "最大风速16km/h"
+      "wind": "最大风速15km/h"
     },
     {
       "date": "2026-11-02",
       "weekday": "星期日",
       "day": "毛毛雨",
-      "night": "夜间关注",
-      "high": 31,
+      "night": "降雨概率56%",
+      "high": 32,
       "low": 24,
-      "wind": "最大风速11km/h"
+      "wind": "最大风速10km/h"
     },
     {
       "date": "2026-11-03",
@@ -56,7 +47,7 @@
       "night": "夜间关注",
       "high": 30,
       "low": 23,
-      "wind": "最大风速15km/h"
+      "wind": "最大风速17km/h"
     },
     {
       "date": "2026-11-04",
@@ -65,34 +56,43 @@
       "night": "夜间关注",
       "high": 29,
       "low": 24,
-      "wind": "最大风速13km/h"
+      "wind": "最大风速16km/h"
     },
     {
       "date": "2026-11-05",
       "weekday": "星期三",
       "day": "毛毛雨",
-      "night": "夜间关注",
+      "night": "降雨概率61%",
       "high": 29,
-      "low": 24,
-      "wind": "最大风速7km/h"
+      "low": 23,
+      "wind": "最大风速8km/h"
     },
     {
       "date": "2026-11-06",
       "weekday": "星期四",
       "day": "毛毛雨",
-      "night": "夜间关注",
+      "night": "降雨概率63%",
       "high": 28,
-      "low": 23,
-      "wind": "最大风速13km/h"
+      "low": 22,
+      "wind": "最大风速14km/h"
     },
     {
       "date": "2026-11-07",
       "weekday": "星期五",
       "day": "毛毛雨",
       "night": "夜间关注",
+      "high": 27,
+      "low": 22,
+      "wind": "最大风速20km/h"
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "星期六",
+      "day": "多云",
+      "night": "夜间关注",
       "high": 28,
-      "low": 23,
-      "wind": "最大风速13km/h"
+      "low": 22,
+      "wind": "最大风速16km/h"
     }
   ],
   "watchItems": [
